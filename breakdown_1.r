@@ -37,6 +37,7 @@ data <- data %>%
 
 fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = component)) +
   geom_col(width = 0.7, linewidth = 1, position = position_stack(reverse = TRUE)) +
+  facet_grid(. ~ stage) +
   scale_fill_manual(
     values = c(MLP = "#DAE8FC", Other = "#FFF2CC", Attention = "#F8CECC"),
   ) +
@@ -49,7 +50,6 @@ fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = comp
     labels = c("0", "0.25", "0.5", "0.75", "1"),
   ) +
   labs(x = "Normalized Time", y = NULL) +
-  facet_grid(. ~ stage) +
   theme_minimal(base_size = 18) +
   theme(
     strip.text = element_text(size = 28),
