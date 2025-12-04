@@ -1,7 +1,7 @@
 library(tidyverse)
 
 data <- tribble(
-  ~context, ~method,    ~type,            ~latency,
+  ~tokens,  ~method,    ~component,       ~latency,
   "100K",   "Baseline", "Non-Attention",  2,
   "100K",   "Baseline", "Attention",      10,
   "100K",   "Ours",     "Non-Attention",  2,
@@ -22,17 +22,17 @@ data <- tribble(
 
 data <- data %>%
   mutate(
-    context = fct_relevel(context, "100K", "200K", "300K", "400K"),
+    tokens = fct_inorder(tokens),
     method = fct_relevel(method, "Baseline", "Ours"),
-    type = fct_relevel(type, "Non-Attention", "Attention")
+    component = fct_relevel(component, "Non-Attention", "Attention")
   ) %>%
-  group_by(context, method) %>%
+  group_by(tokens, method) %>%
   mutate(total_latency = sum(latency)) %>%
   ungroup()
 
 reduction_labels <- data %>%
-  distinct(context, method, total_latency) %>%
-  group_by(context) %>%
+  distinct(tokens, method, total_latency) %>%
+  group_by(tokens) %>%
   mutate(
     baseline_latency = total_latency[method == "Baseline"],
     reduction = (total_latency - baseline_latency) / baseline_latency,
@@ -40,7 +40,7 @@ reduction_labels <- data %>%
   ) %>%
   ungroup()
 
-fig <- ggplot(data, aes(x = method, y = latency, fill = type, colour = type)) +
+fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = component)) +
   geom_col(width = 0.7, position = position_stack(reverse = TRUE)) +
   geom_text(
     data = reduction_labels,
@@ -50,7 +50,7 @@ fig <- ggplot(data, aes(x = method, y = latency, fill = type, colour = type)) +
     fontface = "bold",
     inherit.aes = FALSE
   ) +
-  facet_grid(. ~ context, switch = "x") +
+  facet_grid(. ~ tokens, switch = "x") +
   scale_fill_manual(
     values = c("Non-Attention" = "#DAE8FC", "Attention" = "#F8CECC"),
     breaks = c("Non-Attention", "Attention")
