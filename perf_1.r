@@ -4,26 +4,26 @@ data <- tribble(
   ~tokens,  ~method,   ~component,       ~latency,
   "200K",   "Vanilla", "Non-Attention",  2,
   "200K",   "Vanilla", "Attention",      10,
-  "200K",   "Ours",    "Non-Attention",  2,
-  "200K",   "Ours",    "Attention",      3,
+  "200K",   "WG-KV",   "Non-Attention",  2,
+  "200K",   "WG-KV",   "Attention",      3,
   "300K",   "Vanilla", "Non-Attention",  4,
   "300K",   "Vanilla", "Attention",      40,
-  "300K",   "Ours",    "Non-Attention",  4,
-  "300K",   "Ours",    "Attention",      12,
+  "300K",   "WG-KV",   "Non-Attention",  4,
+  "300K",   "WG-KV",   "Attention",      12,
   "400K",   "Vanilla", "Non-Attention",  6,
   "400K",   "Vanilla", "Attention",      90,
-  "400K",   "Ours",    "Non-Attention",  6,
-  "400K",   "Ours",    "Attention",      25,
+  "400K",   "WG-KV",   "Non-Attention",  6,
+  "400K",   "WG-KV",   "Attention",      25,
   "500K",   "Vanilla", "Non-Attention",  NA,
   "500K",   "Vanilla", "Attention",      NA,
-  "500K",   "Ours",    "Non-Attention",  8,
-  "500K",   "Ours",    "Attention",      45,
+  "500K",   "WG-KV",   "Non-Attention",  8,
+  "500K",   "WG-KV",   "Attention",      45,
 )
 
 data <- data %>%
   mutate(
     tokens = fct_inorder(tokens),
-    method = fct_relevel(method, "Vanilla", "Ours"),
+    method = fct_relevel(method, "Vanilla", "WG-KV"),
     component = fct_relevel(component, "Non-Attention", "Attention")
   ) %>%
   group_by(tokens, method) %>%
@@ -37,7 +37,7 @@ reduction_labels <- data %>%
     vanilla_latency = total_latency[method == "Vanilla"],
     reduction = (total_latency - vanilla_latency) / vanilla_latency,
     label = if_else(
-      method == "Ours",
+      method == "WG-KV",
       scales::label_percent(accuracy = 1)(reduction),
       ""
     )
