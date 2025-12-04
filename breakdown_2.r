@@ -26,10 +26,6 @@ fig <- ggplot(data, aes(x = memory, y = tokens, fill = component, colour = compo
   scale_colour_manual(
     values = c("Model Weights" = "#6C8EBF", "KV Cache" = "#B85450"),
   ) +
-  scale_x_continuous(
-    limits = c(0, 90),
-    breaks = seq(0, 90, by = 15),
-  ) +
   labs(x = "Size (GB)", y = NULL, title = "(c) Memory Usage") +
   theme_minimal(base_size = 18) +
   theme(
