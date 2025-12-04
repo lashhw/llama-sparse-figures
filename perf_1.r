@@ -45,7 +45,7 @@ reduction_labels <- data %>%
   ungroup()
 
 fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = component)) +
-  geom_col(width = 0.7, position = position_stack(reverse = TRUE)) +
+  geom_col(width = 0.75, position = position_stack(reverse = TRUE)) +
   geom_text(
     data = reduction_labels,
     aes(x = method, y = total_latency, label = label),
@@ -76,7 +76,7 @@ fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = comp
     strip.text.x = element_text(size = 20),
     panel.spacing = unit(0, "cm"),
     panel.grid.major.x = element_blank(),
-    panel.grid.minor.x = element_blank()
+    panel.grid.minor.x = element_blank(),
   )
 
 ggsave("perf_1.pdf", fig, width = 5.0, height = 4.0, units = "in")
