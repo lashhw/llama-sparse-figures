@@ -36,7 +36,7 @@ data <- data %>%
   )
 
 fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = component)) +
-  geom_col(width = 0.7, linewidth = 1, position = position_stack(reverse = TRUE)) +
+  geom_col(width = 0.75, position = position_stack(reverse = TRUE)) +
   facet_grid(. ~ stage) +
   scale_fill_manual(
     values = c(MLP = "#DAE8FC", Other = "#FFF2CC", Attention = "#F8CECC"),
@@ -61,4 +61,4 @@ fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = comp
     panel.grid.major.y = element_blank(),
   )
 
-ggsave("breakdown_1.pdf", fig, width = 8.7, height = 4.3, units = "in")
+ggsave("breakdown_1.pdf", fig, width = 8.0, height = 4.0, units = "in")

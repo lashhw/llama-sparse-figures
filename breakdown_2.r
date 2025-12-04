@@ -19,7 +19,7 @@ data <- data %>%
   )
 
 fig <- ggplot(data, aes(x = memory, y = tokens, fill = component, colour = component)) +
-  geom_col(width = 0.7, linewidth = 1, position = position_stack(reverse = TRUE)) +
+  geom_col(width = 0.75, position = position_stack(reverse = TRUE)) +
   scale_fill_manual(
     values = c("Model Weights" = "#DAE8FC", "KV Cache" = "#F8CECC"),
   ) +
@@ -38,4 +38,4 @@ fig <- ggplot(data, aes(x = memory, y = tokens, fill = component, colour = compo
     panel.grid.major.y = element_blank(),
   )
 
-ggsave("breakdown_2.pdf", fig, width = 4.7, height = 4.3, units = "in")
+ggsave("breakdown_2.pdf", fig, width = 8.0, height = 4.0, units = "in")
