@@ -2,14 +2,14 @@ library(tidyverse)
 
 data <- tribble(
   ~tokens, ~component,       ~memory,
-  "100K",  "Model Weights",   15,
-  "100K",  "KV Cache",        12,
-  "200K",  "Model Weights",   15,
-  "200K",  "KV Cache",        30,
-  "300K",  "Model Weights",   15,
-  "300K",  "KV Cache",        60,
-  "400K",  "Model Weights",   15,
-  "400K",  "KV Cache",        75,
+  "100K",  "Model Weights",  15,
+  "100K",  "KV Cache",       12,
+  "200K",  "Model Weights",  15,
+  "200K",  "KV Cache",       30,
+  "300K",  "Model Weights",  15,
+  "300K",  "KV Cache",       60,
+  "400K",  "Model Weights",  15,
+  "400K",  "KV Cache",       75,
 )
 
 data <- data %>%
@@ -40,7 +40,6 @@ fig <- ggplot(data, aes(x = memory, y = tokens, fill = component, colour = compo
     axis.text.x = element_text(size = 16, colour = "black"),
     axis.text.y = element_blank(),
     panel.grid.major.y = element_blank(),
-    panel.grid.minor = element_blank(),
   )
 
 ggsave("breakdown_2.pdf", fig, width = 4.7, height = 4.3, units = "in")
