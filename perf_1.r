@@ -2,20 +2,20 @@ library(tidyverse)
 
 data <- tribble(
   ~tokens,  ~method,    ~component,       ~latency,
-  "100K",   "Baseline", "Non-Attention",  2,
-  "100K",   "Baseline", "Attention",      10,
+  "100K",   "Vanilla", "Non-Attention",  2,
+  "100K",   "Vanilla", "Attention",      10,
   "100K",   "Ours",     "Non-Attention",  2,
   "100K",   "Ours",     "Attention",      3,
-  "200K",   "Baseline", "Non-Attention",  4,
-  "200K",   "Baseline", "Attention",      40,
+  "200K",   "Vanilla", "Non-Attention",  4,
+  "200K",   "Vanilla", "Attention",      40,
   "200K",   "Ours",     "Non-Attention",  4,
   "200K",   "Ours",     "Attention",      12,
-  "300K",   "Baseline", "Non-Attention",  6,
-  "300K",   "Baseline", "Attention",      90,
+  "300K",   "Vanilla", "Non-Attention",  6,
+  "300K",   "Vanilla", "Attention",      90,
   "300K",   "Ours",     "Non-Attention",  6,
   "300K",   "Ours",     "Attention",      25,
-  "400K",   "Baseline", "Non-Attention",  8,
-  "400K",   "Baseline", "Attention",      160,
+  "400K",   "Vanilla", "Non-Attention",  8,
+  "400K",   "Vanilla", "Attention",      160,
   "400K",   "Ours",     "Non-Attention",  8,
   "400K",   "Ours",     "Attention",      45,
 )
@@ -23,7 +23,7 @@ data <- tribble(
 data <- data %>%
   mutate(
     tokens = fct_inorder(tokens),
-    method = fct_relevel(method, "Baseline", "Ours"),
+    method = fct_relevel(method, "Vanilla", "Ours"),
     component = fct_relevel(component, "Non-Attention", "Attention")
   ) %>%
   group_by(tokens, method) %>%
@@ -34,8 +34,8 @@ reduction_labels <- data %>%
   distinct(tokens, method, total_latency) %>%
   group_by(tokens) %>%
   mutate(
-    baseline_latency = total_latency[method == "Baseline"],
-    reduction = (total_latency - baseline_latency) / baseline_latency,
+    banilla_latency = total_latency[method == "Vanilla"],
+    reduction = (total_latency - banilla_latency) / banilla_latency,
     label = if_else(method == "Ours", scales::percent(reduction, accuracy = 1), "")
   ) %>%
   ungroup()
