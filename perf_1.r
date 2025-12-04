@@ -1,23 +1,23 @@
 library(tidyverse)
 
 data <- tribble(
-  ~tokens,  ~method,    ~component,       ~latency,
-  "100K",   "Vanilla", "Non-Attention",  2,
-  "100K",   "Vanilla", "Attention",      10,
-  "100K",   "Ours",     "Non-Attention",  2,
-  "100K",   "Ours",     "Attention",      3,
-  "200K",   "Vanilla", "Non-Attention",  4,
-  "200K",   "Vanilla", "Attention",      40,
-  "200K",   "Ours",     "Non-Attention",  4,
-  "200K",   "Ours",     "Attention",      12,
-  "300K",   "Vanilla", "Non-Attention",  6,
-  "300K",   "Vanilla", "Attention",      90,
-  "300K",   "Ours",     "Non-Attention",  6,
-  "300K",   "Ours",     "Attention",      25,
-  "400K",   "Vanilla", "Non-Attention",  8,
-  "400K",   "Vanilla", "Attention",      160,
-  "400K",   "Ours",     "Non-Attention",  8,
-  "400K",   "Ours",     "Attention",      45,
+  ~tokens,  ~method,   ~component,       ~latency,
+  "200K",   "Vanilla", "Non-Attention",  2,
+  "200K",   "Vanilla", "Attention",      10,
+  "200K",   "Ours",    "Non-Attention",  2,
+  "200K",   "Ours",    "Attention",      3,
+  "300K",   "Vanilla", "Non-Attention",  4,
+  "300K",   "Vanilla", "Attention",      40,
+  "300K",   "Ours",    "Non-Attention",  4,
+  "300K",   "Ours",    "Attention",      12,
+  "400K",   "Vanilla", "Non-Attention",  6,
+  "400K",   "Vanilla", "Attention",      90,
+  "400K",   "Ours",    "Non-Attention",  6,
+  "400K",   "Ours",    "Attention",      25,
+  "500K",   "Vanilla", "Non-Attention",  NA,
+  "500K",   "Vanilla", "Attention",      NA,
+  "500K",   "Ours",    "Non-Attention",  8,
+  "500K",   "Ours",    "Attention",      45,
 )
 
 data <- data %>%
@@ -34,9 +34,13 @@ reduction_labels <- data %>%
   distinct(tokens, method, total_latency) %>%
   group_by(tokens) %>%
   mutate(
-    banilla_latency = total_latency[method == "Vanilla"],
-    reduction = (total_latency - banilla_latency) / banilla_latency,
-    label = if_else(method == "Ours", scales::percent(reduction, accuracy = 1), "")
+    vanilla_latency = total_latency[method == "Vanilla"],
+    reduction = (total_latency - vanilla_latency) / vanilla_latency,
+    label = if_else(
+      method == "Ours",
+      scales::label_percent(accuracy = 1)(reduction),
+      ""
+    )
   ) %>%
   ungroup()
 
@@ -47,22 +51,19 @@ fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = comp
     aes(x = method, y = total_latency, label = label),
     vjust = -0.5,
     size = 5,
-    fontface = "bold",
     inherit.aes = FALSE
   ) +
   facet_grid(. ~ tokens, switch = "x") +
   scale_fill_manual(
     values = c("Non-Attention" = "#DAE8FC", "Attention" = "#F8CECC"),
-    breaks = c("Non-Attention", "Attention")
   ) +
   scale_colour_manual(
     values = c("Non-Attention" = "#6C8EBF", "Attention" = "#B85450"),
-    breaks = c("Non-Attention", "Attention")
   ) +
   labs(
     title = "(a) Prefill Latency",
+    x = NULL,
     y = "Time to First Token (s)",
-    x = NULL
   ) +
   theme_minimal(base_size = 18) +
   theme(
@@ -71,12 +72,11 @@ fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = comp
     legend.title = element_blank(),
     legend.text = element_text(size = 18),
     axis.text.x = element_blank(),
-    axis.ticks.x = element_blank(),
-    axis.text.y = element_text(size = 20, colour = "black"),
-    strip.text.x = element_text(size = 20, colour = "black"),
-    panel.spacing = unit(0.3, "cm"),
+    axis.text.y = element_text(size = 16, colour = "black"),
+    strip.text.x = element_text(size = 20),
+    panel.spacing = unit(0, "cm"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor.x = element_blank()
   )
 
-ggsave("perf_1.pdf", fig, width = 8.7, height = 5.3, units = "in")
+ggsave("perf_1.pdf", fig, width = 5.0, height = 4.0, units = "in")
