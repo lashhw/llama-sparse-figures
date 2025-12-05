@@ -1,4 +1,4 @@
-panel_title,y_label,kv_ratio,method,score
+panel_title,y_label,kv_budget,method,score
 Natural Questions,Accuracy,0.0,WG-KV,0.55
 Natural Questions,Accuracy,0.1,WG-KV,0.58
 Natural Questions,Accuracy,0.2,WG-KV,0.61
