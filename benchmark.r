@@ -3,7 +3,7 @@ library(patchwork)
 
 data <- read_csv("data/benchmark.csv") %>%
   mutate(
-    method = fct_rev(fct_inorder(method))
+    method = fct_inorder(method)
   )
 
 panel_info <- data %>%
@@ -36,7 +36,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
       theme(
         plot.title = element_text(size = 13, hjust = 0.5),
         legend.title = element_blank(),
-        legend.text = element_text(size = 14),
+        legend.text = element_text(size = 15),
         axis.text.x = element_text(size = 10, colour = "black"),
         axis.text.y = element_text(size = 10, colour = "black"),
         axis.title.x = element_text(size = 11),
