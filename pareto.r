@@ -6,8 +6,8 @@ kv_low <- 0.1
 
 points <- tibble(
   point = factor(
-    c("Vanilla", "WG-KV Only", "QUEST Only", "WG-KV + QUEST"),
-    levels = c("Vanilla", "WG-KV Only", "QUEST Only", "WG-KV + QUEST")
+    c("Full Attention", "WG-KV Only", "QUEST Only", "WG-KV + QUEST"),
+    levels = c("Full Attention", "WG-KV Only", "QUEST Only", "WG-KV + QUEST")
   ),
   kv_size = c(1.0, 1.0, kv_mid, kv_mid),
   kv_read = c(1.0, kv_low, kv_mid, kv_low)
@@ -16,16 +16,16 @@ points <- tibble(
 fig <- ggplot(points, aes(x = kv_size, y = kv_read, fill = point, colour = point, starshape = point, size = point)) +
   geom_star(starstroke = 1) +
   scale_fill_manual(
-    values = c("Vanilla" = "#F5F5F5", "WG-KV Only" = "#DAE8FC", "QUEST Only" = "#D5E8D4", "WG-KV + QUEST" = "#FFE6CC")
+    values = c("Full Attention" = "#F5F5F5", "WG-KV Only" = "#DAE8FC", "QUEST Only" = "#D5E8D4", "WG-KV + QUEST" = "#FFE6CC")
   ) +
   scale_colour_manual(
-    values = c("Vanilla" = "#666666", "WG-KV Only" = "#6C8EBF", "QUEST Only" = "#82B366", "WG-KV + QUEST" = "#D79B00")
+    values = c("Full Attention" = "#666666", "WG-KV Only" = "#6C8EBF", "QUEST Only" = "#82B366", "WG-KV + QUEST" = "#D79B00")
   ) +
   scale_starshape_manual(
-    values = c("Vanilla" = 15, "WG-KV Only" = 13, "QUEST Only" = 11, "WG-KV + QUEST" = 5)
+    values = c("Full Attention" = 15, "WG-KV Only" = 13, "QUEST Only" = 11, "WG-KV + QUEST" = 5)
   ) +
   scale_size_manual(
-    values = c("Vanilla" = 3.2, "WG-KV Only" = 3.2, "QUEST Only" = 3.7, "WG-KV + QUEST" = 3.5)
+    values = c("Full Attention" = 3.2, "WG-KV Only" = 3.2, "QUEST Only" = 3.7, "WG-KV + QUEST" = 3.5)
   ) +
   scale_x_continuous(
     limits = c(0, 1),
