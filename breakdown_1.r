@@ -52,7 +52,7 @@ fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = comp
   labs(x = "Normalized Time", y = NULL) +
   theme_minimal(base_size = 18) +
   theme(
-    strip.text = element_text(size = 28),
+    strip.text = element_text(size = 24),
     legend.position = "top",
     legend.title = element_blank(),
     legend.text = element_text(size = 18),
@@ -61,4 +61,4 @@ fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = comp
     panel.grid.major.y = element_blank(),
   )
 
-ggsave("breakdown_1.pdf", fig, width = 8.0, height = 4.0, units = "in")
+ggsave("breakdown_1.pdf", fig, width = 7.0, height = 4.0, units = "in")

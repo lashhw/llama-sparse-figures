@@ -54,7 +54,7 @@ plot_list <- map(seq_along(y_labels), \(id) {
       y = y_label,
       title = panel_label
     ) +
-    theme_minimal() +
+    theme_minimal(base_size = 14) +
     theme(
       plot.title = element_text(size = 12, hjust = 0.5),
       axis.text.x = element_text(size = 10, colour = "black"),

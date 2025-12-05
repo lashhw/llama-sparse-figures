@@ -29,7 +29,7 @@ fig <- ggplot(data, aes(x = memory, y = tokens, fill = component, colour = compo
   labs(x = "Size (GB)", y = NULL, title = "(c) Memory Usage") +
   theme_minimal(base_size = 18) +
   theme(
-    plot.title = element_text(size = 28, hjust = 0.5),
+    plot.title = element_text(size = 24, hjust = 0.5),
     legend.position = "top",
     legend.title = element_blank(),
     legend.text = element_text(size = 18),
@@ -38,4 +38,4 @@ fig <- ggplot(data, aes(x = memory, y = tokens, fill = component, colour = compo
     panel.grid.major.y = element_blank(),
   )
 
-ggsave("breakdown_2.pdf", fig, width = 8.0, height = 4.0, units = "in")
+ggsave("breakdown_2.pdf", fig, width = 3.5, height = 4.0, units = "in")
