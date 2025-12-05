@@ -1,7 +1,7 @@
 library(tidyverse)
 
 read_gate_matrix <- function(path, panel_label) {
-  read_csv(path, show_col_types = FALSE) %>%
+  read_csv(path) %>%
     mutate(layer_index = row_number()) %>%
     pivot_longer(
       cols = starts_with("head_"),
