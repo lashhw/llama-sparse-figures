@@ -1,8 +1,6 @@
 library(tidyverse)
 
-data <- read_csv("data/breakdown_2.csv")
-
-data <- data %>%
+data <- read_csv("data/breakdown_2.csv") %>%
   mutate(
     tokens = fct_rev(fct_inorder(tokens)),
     component = fct_relevel(component, "Model Weights", "KV Cache")

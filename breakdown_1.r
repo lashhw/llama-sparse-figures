@@ -1,8 +1,6 @@
 library(tidyverse)
 
-data <- read_csv("data/breakdown_1.csv")
-
-data <- data %>%
+data <- read_csv("data/breakdown_1.csv") %>%
   mutate(
     stage = fct_relevel(stage, "(a) Prefill Latency", "(b) Decode Latency"),
     tokens = fct_rev(fct_inorder(tokens)),

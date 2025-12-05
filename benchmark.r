@@ -1,14 +1,14 @@
 library(tidyverse)
 library(patchwork)
 
-data <- read_csv("data/benchmark.csv")
+data <- read_csv("data/benchmark.csv") %>%
+  mutate(
+    method = fct_rev(fct_inorder(method))
+  )
 
 panel_info <- data %>%
   distinct(panel_id, panel_title, y_label) %>%
   arrange(panel_id)
-
-data <- data %>%
-  mutate(method = fct_rev(fct_inorder(method)))
 
 plot_list <- map(seq_len(nrow(panel_info)), \(id) {
   panel_label <- panel_info$panel_title[[id]]

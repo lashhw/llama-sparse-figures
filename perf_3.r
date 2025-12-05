@@ -1,8 +1,6 @@
 library(tidyverse)
 
-data <- read_csv("data/perf_3.csv")
-
-data <- data %>%
+data <- read_csv("data/perf_3.csv") %>%
   mutate(
     tokens = fct_inorder(tokens),
     method = fct_relevel(method, "Vanilla", "WG-KV"),
