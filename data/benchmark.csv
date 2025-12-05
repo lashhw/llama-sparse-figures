@@ -8,7 +8,7 @@ Natural Questions,Accuracy,0.5,WG-KV,0.70
 Natural Questions,Accuracy,0.6,WG-KV,0.74
 Natural Questions,Accuracy,0.7,WG-KV,0.78
 Natural Questions,Accuracy,0.8,WG-KV,0.82
-Natural Questions,Accuracy,0.9,WG-KV,0.86
+Natural Questions,Accuracy,1.0,WG-KV,0.86
 Natural Questions,Accuracy,0.0,DuoAttention,0.50
 Natural Questions,Accuracy,0.1,DuoAttention,0.52
 Natural Questions,Accuracy,0.2,DuoAttention,0.55
@@ -18,7 +18,7 @@ Natural Questions,Accuracy,0.5,DuoAttention,0.63
 Natural Questions,Accuracy,0.6,DuoAttention,0.66
 Natural Questions,Accuracy,0.7,DuoAttention,0.69
 Natural Questions,Accuracy,0.8,DuoAttention,0.72
-Natural Questions,Accuracy,0.9,DuoAttention,0.75
+Natural Questions,Accuracy,1.0,DuoAttention,0.75
 Natural Questions,Accuracy,0.0,Local Attention,0.45
 Natural Questions,Accuracy,0.1,Local Attention,0.47
 Natural Questions,Accuracy,0.2,Local Attention,0.50
@@ -28,7 +28,7 @@ Natural Questions,Accuracy,0.5,Local Attention,0.56
 Natural Questions,Accuracy,0.6,Local Attention,0.59
 Natural Questions,Accuracy,0.7,Local Attention,0.62
 Natural Questions,Accuracy,0.8,Local Attention,0.65
-Natural Questions,Accuracy,0.9,Local Attention,0.68
+Natural Questions,Accuracy,1.0,Local Attention,0.68
 TriviaQA,Accuracy,0.0,WG-KV,0.55
 TriviaQA,Accuracy,0.1,WG-KV,0.58
 TriviaQA,Accuracy,0.2,WG-KV,0.61
@@ -38,7 +38,7 @@ TriviaQA,Accuracy,0.5,WG-KV,0.70
 TriviaQA,Accuracy,0.6,WG-KV,0.74
 TriviaQA,Accuracy,0.7,WG-KV,0.78
 TriviaQA,Accuracy,0.8,WG-KV,0.82
-TriviaQA,Accuracy,0.9,WG-KV,0.86
+TriviaQA,Accuracy,1.0,WG-KV,0.86
 TriviaQA,Accuracy,0.0,DuoAttention,0.50
 TriviaQA,Accuracy,0.1,DuoAttention,0.52
 TriviaQA,Accuracy,0.2,DuoAttention,0.55
@@ -48,7 +48,7 @@ TriviaQA,Accuracy,0.5,DuoAttention,0.63
 TriviaQA,Accuracy,0.6,DuoAttention,0.66
 TriviaQA,Accuracy,0.7,DuoAttention,0.69
 TriviaQA,Accuracy,0.8,DuoAttention,0.72
-TriviaQA,Accuracy,0.9,DuoAttention,0.75
+TriviaQA,Accuracy,1.0,DuoAttention,0.75
 TriviaQA,Accuracy,0.0,Local Attention,0.45
 TriviaQA,Accuracy,0.1,Local Attention,0.47
 TriviaQA,Accuracy,0.2,Local Attention,0.50
@@ -58,7 +58,7 @@ TriviaQA,Accuracy,0.5,Local Attention,0.56
 TriviaQA,Accuracy,0.6,Local Attention,0.59
 TriviaQA,Accuracy,0.7,Local Attention,0.62
 TriviaQA,Accuracy,0.8,Local Attention,0.65
-TriviaQA,Accuracy,0.9,Local Attention,0.68
+TriviaQA,Accuracy,1.0,Local Attention,0.68
 PopQA,Accuracy,0.0,WG-KV,0.55
 PopQA,Accuracy,0.1,WG-KV,0.58
 PopQA,Accuracy,0.2,WG-KV,0.61
@@ -68,7 +68,7 @@ PopQA,Accuracy,0.5,WG-KV,0.70
 PopQA,Accuracy,0.6,WG-KV,0.74
 PopQA,Accuracy,0.7,WG-KV,0.78
 PopQA,Accuracy,0.8,WG-KV,0.82
-PopQA,Accuracy,0.9,WG-KV,0.86
+PopQA,Accuracy,1.0,WG-KV,0.86
 PopQA,Accuracy,0.0,DuoAttention,0.50
 PopQA,Accuracy,0.1,DuoAttention,0.52
 PopQA,Accuracy,0.2,DuoAttention,0.55
@@ -78,7 +78,7 @@ PopQA,Accuracy,0.5,DuoAttention,0.63
 PopQA,Accuracy,0.6,DuoAttention,0.66
 PopQA,Accuracy,0.7,DuoAttention,0.69
 PopQA,Accuracy,0.8,DuoAttention,0.72
-PopQA,Accuracy,0.9,DuoAttention,0.75
+PopQA,Accuracy,1.0,DuoAttention,0.75
 PopQA,Accuracy,0.0,Local Attention,0.45
 PopQA,Accuracy,0.1,Local Attention,0.47
 PopQA,Accuracy,0.2,Local Attention,0.50
@@ -88,7 +88,7 @@ PopQA,Accuracy,0.5,Local Attention,0.56
 PopQA,Accuracy,0.6,Local Attention,0.59
 PopQA,Accuracy,0.7,Local Attention,0.62
 PopQA,Accuracy,0.8,Local Attention,0.65
-PopQA,Accuracy,0.9,Local Attention,0.68
+PopQA,Accuracy,1.0,Local Attention,0.68
 HotpotQA,Accuracy,0.0,WG-KV,0.55
 HotpotQA,Accuracy,0.1,WG-KV,0.58
 HotpotQA,Accuracy,0.2,WG-KV,0.61
@@ -98,7 +98,7 @@ HotpotQA,Accuracy,0.5,WG-KV,0.70
 HotpotQA,Accuracy,0.6,WG-KV,0.74
 HotpotQA,Accuracy,0.7,WG-KV,0.78
 HotpotQA,Accuracy,0.8,WG-KV,0.82
-HotpotQA,Accuracy,0.9,WG-KV,0.86
+HotpotQA,Accuracy,1.0,WG-KV,0.86
 HotpotQA,Accuracy,0.0,DuoAttention,0.50
 HotpotQA,Accuracy,0.1,DuoAttention,0.52
 HotpotQA,Accuracy,0.2,DuoAttention,0.55
@@ -108,7 +108,7 @@ HotpotQA,Accuracy,0.5,DuoAttention,0.63
 HotpotQA,Accuracy,0.6,DuoAttention,0.66
 HotpotQA,Accuracy,0.7,DuoAttention,0.69
 HotpotQA,Accuracy,0.8,DuoAttention,0.72
-HotpotQA,Accuracy,0.9,DuoAttention,0.75
+HotpotQA,Accuracy,1.0,DuoAttention,0.75
 HotpotQA,Accuracy,0.0,Local Attention,0.45
 HotpotQA,Accuracy,0.1,Local Attention,0.47
 HotpotQA,Accuracy,0.2,Local Attention,0.50
@@ -118,7 +118,7 @@ HotpotQA,Accuracy,0.5,Local Attention,0.56
 HotpotQA,Accuracy,0.6,Local Attention,0.59
 HotpotQA,Accuracy,0.7,Local Attention,0.62
 HotpotQA,Accuracy,0.8,Local Attention,0.65
-HotpotQA,Accuracy,0.9,Local Attention,0.68
+HotpotQA,Accuracy,1.0,Local Attention,0.68
 MS MACRO,F1 Score,0.0,WG-KV,0.55
 MS MACRO,F1 Score,0.1,WG-KV,0.58
 MS MACRO,F1 Score,0.2,WG-KV,0.61
@@ -128,7 +128,7 @@ MS MACRO,F1 Score,0.5,WG-KV,0.70
 MS MACRO,F1 Score,0.6,WG-KV,0.74
 MS MACRO,F1 Score,0.7,WG-KV,0.78
 MS MACRO,F1 Score,0.8,WG-KV,0.82
-MS MACRO,F1 Score,0.9,WG-KV,0.86
+MS MACRO,F1 Score,1.0,WG-KV,0.86
 MS MACRO,F1 Score,0.0,DuoAttention,0.50
 MS MACRO,F1 Score,0.1,DuoAttention,0.52
 MS MACRO,F1 Score,0.2,DuoAttention,0.55
@@ -138,7 +138,7 @@ MS MACRO,F1 Score,0.5,DuoAttention,0.63
 MS MACRO,F1 Score,0.6,DuoAttention,0.66
 MS MACRO,F1 Score,0.7,DuoAttention,0.69
 MS MACRO,F1 Score,0.8,DuoAttention,0.72
-MS MACRO,F1 Score,0.9,DuoAttention,0.75
+MS MACRO,F1 Score,1.0,DuoAttention,0.75
 MS MACRO,F1 Score,0.0,Local Attention,0.45
 MS MACRO,F1 Score,0.1,Local Attention,0.47
 MS MACRO,F1 Score,0.2,Local Attention,0.50
@@ -148,7 +148,7 @@ MS MACRO,F1 Score,0.5,Local Attention,0.56
 MS MACRO,F1 Score,0.6,Local Attention,0.59
 MS MACRO,F1 Score,0.7,Local Attention,0.62
 MS MACRO,F1 Score,0.8,Local Attention,0.65
-MS MACRO,F1 Score,0.9,Local Attention,0.68
+MS MACRO,F1 Score,1.0,Local Attention,0.68
 NarrativeQA,F1 Score,0.0,WG-KV,0.55
 NarrativeQA,F1 Score,0.1,WG-KV,0.58
 NarrativeQA,F1 Score,0.2,WG-KV,0.61
@@ -158,7 +158,7 @@ NarrativeQA,F1 Score,0.5,WG-KV,0.70
 NarrativeQA,F1 Score,0.6,WG-KV,0.74
 NarrativeQA,F1 Score,0.7,WG-KV,0.78
 NarrativeQA,F1 Score,0.8,WG-KV,0.82
-NarrativeQA,F1 Score,0.9,WG-KV,0.86
+NarrativeQA,F1 Score,1.0,WG-KV,0.86
 NarrativeQA,F1 Score,0.0,DuoAttention,0.50
 NarrativeQA,F1 Score,0.1,DuoAttention,0.52
 NarrativeQA,F1 Score,0.2,DuoAttention,0.55
@@ -168,7 +168,7 @@ NarrativeQA,F1 Score,0.5,DuoAttention,0.63
 NarrativeQA,F1 Score,0.6,DuoAttention,0.66
 NarrativeQA,F1 Score,0.7,DuoAttention,0.69
 NarrativeQA,F1 Score,0.8,DuoAttention,0.72
-NarrativeQA,F1 Score,0.9,DuoAttention,0.75
+NarrativeQA,F1 Score,1.0,DuoAttention,0.75
 NarrativeQA,F1 Score,0.0,Local Attention,0.45
 NarrativeQA,F1 Score,0.1,Local Attention,0.47
 NarrativeQA,F1 Score,0.2,Local Attention,0.50
@@ -178,7 +178,7 @@ NarrativeQA,F1 Score,0.5,Local Attention,0.56
 NarrativeQA,F1 Score,0.6,Local Attention,0.59
 NarrativeQA,F1 Score,0.7,Local Attention,0.62
 NarrativeQA,F1 Score,0.8,Local Attention,0.65
-NarrativeQA,F1 Score,0.9,Local Attention,0.68
+NarrativeQA,F1 Score,1.0,Local Attention,0.68
 InfiniteBench QA,Accuracy,0.0,WG-KV,0.55
 InfiniteBench QA,Accuracy,0.1,WG-KV,0.58
 InfiniteBench QA,Accuracy,0.2,WG-KV,0.61
@@ -188,7 +188,7 @@ InfiniteBench QA,Accuracy,0.5,WG-KV,0.70
 InfiniteBench QA,Accuracy,0.6,WG-KV,0.74
 InfiniteBench QA,Accuracy,0.7,WG-KV,0.78
 InfiniteBench QA,Accuracy,0.8,WG-KV,0.82
-InfiniteBench QA,Accuracy,0.9,WG-KV,0.86
+InfiniteBench QA,Accuracy,1.0,WG-KV,0.86
 InfiniteBench QA,Accuracy,0.0,DuoAttention,0.50
 InfiniteBench QA,Accuracy,0.1,DuoAttention,0.52
 InfiniteBench QA,Accuracy,0.2,DuoAttention,0.55
@@ -198,7 +198,7 @@ InfiniteBench QA,Accuracy,0.5,DuoAttention,0.63
 InfiniteBench QA,Accuracy,0.6,DuoAttention,0.66
 InfiniteBench QA,Accuracy,0.7,DuoAttention,0.69
 InfiniteBench QA,Accuracy,0.8,DuoAttention,0.72
-InfiniteBench QA,Accuracy,0.9,DuoAttention,0.75
+InfiniteBench QA,Accuracy,1.0,DuoAttention,0.75
 InfiniteBench QA,Accuracy,0.0,Local Attention,0.45
 InfiniteBench QA,Accuracy,0.1,Local Attention,0.47
 InfiniteBench QA,Accuracy,0.2,Local Attention,0.50
@@ -208,7 +208,7 @@ InfiniteBench QA,Accuracy,0.5,Local Attention,0.56
 InfiniteBench QA,Accuracy,0.6,Local Attention,0.59
 InfiniteBench QA,Accuracy,0.7,Local Attention,0.62
 InfiniteBench QA,Accuracy,0.8,Local Attention,0.65
-InfiniteBench QA,Accuracy,0.9,Local Attention,0.68
+InfiniteBench QA,Accuracy,1.0,Local Attention,0.68
 InfiniteBench MC,NDCG@10,0.0,WG-KV,0.55
 InfiniteBench MC,NDCG@10,0.1,WG-KV,0.58
 InfiniteBench MC,NDCG@10,0.2,WG-KV,0.61
@@ -218,7 +218,7 @@ InfiniteBench MC,NDCG@10,0.5,WG-KV,0.70
 InfiniteBench MC,NDCG@10,0.6,WG-KV,0.74
 InfiniteBench MC,NDCG@10,0.7,WG-KV,0.78
 InfiniteBench MC,NDCG@10,0.8,WG-KV,0.82
-InfiniteBench MC,NDCG@10,0.9,WG-KV,0.86
+InfiniteBench MC,NDCG@10,1.0,WG-KV,0.86
 InfiniteBench MC,NDCG@10,0.0,DuoAttention,0.50
 InfiniteBench MC,NDCG@10,0.1,DuoAttention,0.52
 InfiniteBench MC,NDCG@10,0.2,DuoAttention,0.55
@@ -228,7 +228,7 @@ InfiniteBench MC,NDCG@10,0.5,DuoAttention,0.63
 InfiniteBench MC,NDCG@10,0.6,DuoAttention,0.66
 InfiniteBench MC,NDCG@10,0.7,DuoAttention,0.69
 InfiniteBench MC,NDCG@10,0.8,DuoAttention,0.72
-InfiniteBench MC,NDCG@10,0.9,DuoAttention,0.75
+InfiniteBench MC,NDCG@10,1.0,DuoAttention,0.75
 InfiniteBench MC,NDCG@10,0.0,Local Attention,0.45
 InfiniteBench MC,NDCG@10,0.1,Local Attention,0.47
 InfiniteBench MC,NDCG@10,0.2,Local Attention,0.50
@@ -238,7 +238,7 @@ InfiniteBench MC,NDCG@10,0.5,Local Attention,0.56
 InfiniteBench MC,NDCG@10,0.6,Local Attention,0.59
 InfiniteBench MC,NDCG@10,0.7,Local Attention,0.62
 InfiniteBench MC,NDCG@10,0.8,Local Attention,0.65
-InfiniteBench MC,NDCG@10,0.9,Local Attention,0.68
+InfiniteBench MC,NDCG@10,1.0,Local Attention,0.68
 InfiniteBench Sum,F1 Score,0.0,WG-KV,0.55
 InfiniteBench Sum,F1 Score,0.1,WG-KV,0.58
 InfiniteBench Sum,F1 Score,0.2,WG-KV,0.61
@@ -248,7 +248,7 @@ InfiniteBench Sum,F1 Score,0.5,WG-KV,0.70
 InfiniteBench Sum,F1 Score,0.6,WG-KV,0.74
 InfiniteBench Sum,F1 Score,0.7,WG-KV,0.78
 InfiniteBench Sum,F1 Score,0.8,WG-KV,0.82
-InfiniteBench Sum,F1 Score,0.9,WG-KV,0.86
+InfiniteBench Sum,F1 Score,1.0,WG-KV,0.86
 InfiniteBench Sum,F1 Score,0.0,DuoAttention,0.50
 InfiniteBench Sum,F1 Score,0.1,DuoAttention,0.52
 InfiniteBench Sum,F1 Score,0.2,DuoAttention,0.55
@@ -258,7 +258,7 @@ InfiniteBench Sum,F1 Score,0.5,DuoAttention,0.63
 InfiniteBench Sum,F1 Score,0.6,DuoAttention,0.66
 InfiniteBench Sum,F1 Score,0.7,DuoAttention,0.69
 InfiniteBench Sum,F1 Score,0.8,DuoAttention,0.72
-InfiniteBench Sum,F1 Score,0.9,DuoAttention,0.75
+InfiniteBench Sum,F1 Score,1.0,DuoAttention,0.75
 InfiniteBench Sum,F1 Score,0.0,Local Attention,0.45
 InfiniteBench Sum,F1 Score,0.1,Local Attention,0.47
 InfiniteBench Sum,F1 Score,0.2,Local Attention,0.50
@@ -268,7 +268,7 @@ InfiniteBench Sum,F1 Score,0.5,Local Attention,0.56
 InfiniteBench Sum,F1 Score,0.6,Local Attention,0.59
 InfiniteBench Sum,F1 Score,0.7,Local Attention,0.62
 InfiniteBench Sum,F1 Score,0.8,Local Attention,0.65
-InfiniteBench Sum,F1 Score,0.9,Local Attention,0.68
+InfiniteBench Sum,F1 Score,1.0,Local Attention,0.68
 Multi-LexSum,F1 Score,0.0,WG-KV,0.55
 Multi-LexSum,F1 Score,0.1,WG-KV,0.58
 Multi-LexSum,F1 Score,0.2,WG-KV,0.61
@@ -278,7 +278,7 @@ Multi-LexSum,F1 Score,0.5,WG-KV,0.70
 Multi-LexSum,F1 Score,0.6,WG-KV,0.74
 Multi-LexSum,F1 Score,0.7,WG-KV,0.78
 Multi-LexSum,F1 Score,0.8,WG-KV,0.82
-Multi-LexSum,F1 Score,0.9,WG-KV,0.86
+Multi-LexSum,F1 Score,1.0,WG-KV,0.86
 Multi-LexSum,F1 Score,0.0,DuoAttention,0.50
 Multi-LexSum,F1 Score,0.1,DuoAttention,0.52
 Multi-LexSum,F1 Score,0.2,DuoAttention,0.55
@@ -288,7 +288,7 @@ Multi-LexSum,F1 Score,0.5,DuoAttention,0.63
 Multi-LexSum,F1 Score,0.6,DuoAttention,0.66
 Multi-LexSum,F1 Score,0.7,DuoAttention,0.69
 Multi-LexSum,F1 Score,0.8,DuoAttention,0.72
-Multi-LexSum,F1 Score,0.9,DuoAttention,0.75
+Multi-LexSum,F1 Score,1.0,DuoAttention,0.75
 Multi-LexSum,F1 Score,0.0,Local Attention,0.45
 Multi-LexSum,F1 Score,0.1,Local Attention,0.47
 Multi-LexSum,F1 Score,0.2,Local Attention,0.50
@@ -298,7 +298,7 @@ Multi-LexSum,F1 Score,0.5,Local Attention,0.56
 Multi-LexSum,F1 Score,0.6,Local Attention,0.59
 Multi-LexSum,F1 Score,0.7,Local Attention,0.62
 Multi-LexSum,F1 Score,0.8,Local Attention,0.65
-Multi-LexSum,F1 Score,0.9,Local Attention,0.68
+Multi-LexSum,F1 Score,1.0,Local Attention,0.68
 TREC Fine,Accuracy,0.0,WG-KV,0.55
 TREC Fine,Accuracy,0.1,WG-KV,0.58
 TREC Fine,Accuracy,0.2,WG-KV,0.61
@@ -308,7 +308,7 @@ TREC Fine,Accuracy,0.5,WG-KV,0.70
 TREC Fine,Accuracy,0.6,WG-KV,0.74
 TREC Fine,Accuracy,0.7,WG-KV,0.78
 TREC Fine,Accuracy,0.8,WG-KV,0.82
-TREC Fine,Accuracy,0.9,WG-KV,0.86
+TREC Fine,Accuracy,1.0,WG-KV,0.86
 TREC Fine,Accuracy,0.0,DuoAttention,0.50
 TREC Fine,Accuracy,0.1,DuoAttention,0.52
 TREC Fine,Accuracy,0.2,DuoAttention,0.55
@@ -318,7 +318,7 @@ TREC Fine,Accuracy,0.5,DuoAttention,0.63
 TREC Fine,Accuracy,0.6,DuoAttention,0.66
 TREC Fine,Accuracy,0.7,DuoAttention,0.69
 TREC Fine,Accuracy,0.8,DuoAttention,0.72
-TREC Fine,Accuracy,0.9,DuoAttention,0.75
+TREC Fine,Accuracy,1.0,DuoAttention,0.75
 TREC Fine,Accuracy,0.0,Local Attention,0.45
 TREC Fine,Accuracy,0.1,Local Attention,0.47
 TREC Fine,Accuracy,0.2,Local Attention,0.50
@@ -328,7 +328,7 @@ TREC Fine,Accuracy,0.5,Local Attention,0.56
 TREC Fine,Accuracy,0.6,Local Attention,0.59
 TREC Fine,Accuracy,0.7,Local Attention,0.62
 TREC Fine,Accuracy,0.8,Local Attention,0.65
-TREC Fine,Accuracy,0.9,Local Attention,0.68
+TREC Fine,Accuracy,1.0,Local Attention,0.68
 NLU,Accuracy,0.0,WG-KV,0.55
 NLU,Accuracy,0.1,WG-KV,0.58
 NLU,Accuracy,0.2,WG-KV,0.61
@@ -338,7 +338,7 @@ NLU,Accuracy,0.5,WG-KV,0.70
 NLU,Accuracy,0.6,WG-KV,0.74
 NLU,Accuracy,0.7,WG-KV,0.78
 NLU,Accuracy,0.8,WG-KV,0.82
-NLU,Accuracy,0.9,WG-KV,0.86
+NLU,Accuracy,1.0,WG-KV,0.86
 NLU,Accuracy,0.0,DuoAttention,0.50
 NLU,Accuracy,0.1,DuoAttention,0.52
 NLU,Accuracy,0.2,DuoAttention,0.55
@@ -348,7 +348,7 @@ NLU,Accuracy,0.5,DuoAttention,0.63
 NLU,Accuracy,0.6,DuoAttention,0.66
 NLU,Accuracy,0.7,DuoAttention,0.69
 NLU,Accuracy,0.8,DuoAttention,0.72
-NLU,Accuracy,0.9,DuoAttention,0.75
+NLU,Accuracy,1.0,DuoAttention,0.75
 NLU,Accuracy,0.0,Local Attention,0.45
 NLU,Accuracy,0.1,Local Attention,0.47
 NLU,Accuracy,0.2,Local Attention,0.50
@@ -358,7 +358,7 @@ NLU,Accuracy,0.5,Local Attention,0.56
 NLU,Accuracy,0.6,Local Attention,0.59
 NLU,Accuracy,0.7,Local Attention,0.62
 NLU,Accuracy,0.8,Local Attention,0.65
-NLU,Accuracy,0.9,Local Attention,0.68
+NLU,Accuracy,1.0,Local Attention,0.68
 BANKING77,Accuracy,0.0,WG-KV,0.55
 BANKING77,Accuracy,0.1,WG-KV,0.58
 BANKING77,Accuracy,0.2,WG-KV,0.61
@@ -368,7 +368,7 @@ BANKING77,Accuracy,0.5,WG-KV,0.70
 BANKING77,Accuracy,0.6,WG-KV,0.74
 BANKING77,Accuracy,0.7,WG-KV,0.78
 BANKING77,Accuracy,0.8,WG-KV,0.82
-BANKING77,Accuracy,0.9,WG-KV,0.86
+BANKING77,Accuracy,1.0,WG-KV,0.86
 BANKING77,Accuracy,0.0,DuoAttention,0.50
 BANKING77,Accuracy,0.1,DuoAttention,0.52
 BANKING77,Accuracy,0.2,DuoAttention,0.55
@@ -378,7 +378,7 @@ BANKING77,Accuracy,0.5,DuoAttention,0.63
 BANKING77,Accuracy,0.6,DuoAttention,0.66
 BANKING77,Accuracy,0.7,DuoAttention,0.69
 BANKING77,Accuracy,0.8,DuoAttention,0.72
-BANKING77,Accuracy,0.9,DuoAttention,0.75
+BANKING77,Accuracy,1.0,DuoAttention,0.75
 BANKING77,Accuracy,0.0,Local Attention,0.45
 BANKING77,Accuracy,0.1,Local Attention,0.47
 BANKING77,Accuracy,0.2,Local Attention,0.50
@@ -388,7 +388,7 @@ BANKING77,Accuracy,0.5,Local Attention,0.56
 BANKING77,Accuracy,0.6,Local Attention,0.59
 BANKING77,Accuracy,0.7,Local Attention,0.62
 BANKING77,Accuracy,0.8,Local Attention,0.65
-BANKING77,Accuracy,0.9,Local Attention,0.68
+BANKING77,Accuracy,1.0,Local Attention,0.68
 CLINC150,Accuracy,0.0,WG-KV,0.55
 CLINC150,Accuracy,0.1,WG-KV,0.58
 CLINC150,Accuracy,0.2,WG-KV,0.61
@@ -398,7 +398,7 @@ CLINC150,Accuracy,0.5,WG-KV,0.70
 CLINC150,Accuracy,0.6,WG-KV,0.74
 CLINC150,Accuracy,0.7,WG-KV,0.78
 CLINC150,Accuracy,0.8,WG-KV,0.82
-CLINC150,Accuracy,0.9,WG-KV,0.86
+CLINC150,Accuracy,1.0,WG-KV,0.86
 CLINC150,Accuracy,0.0,DuoAttention,0.50
 CLINC150,Accuracy,0.1,DuoAttention,0.52
 CLINC150,Accuracy,0.2,DuoAttention,0.55
@@ -408,7 +408,7 @@ CLINC150,Accuracy,0.5,DuoAttention,0.63
 CLINC150,Accuracy,0.6,DuoAttention,0.66
 CLINC150,Accuracy,0.7,DuoAttention,0.69
 CLINC150,Accuracy,0.8,DuoAttention,0.72
-CLINC150,Accuracy,0.9,DuoAttention,0.75
+CLINC150,Accuracy,1.0,DuoAttention,0.75
 CLINC150,Accuracy,0.0,Local Attention,0.45
 CLINC150,Accuracy,0.1,Local Attention,0.47
 CLINC150,Accuracy,0.2,Local Attention,0.50
@@ -418,4 +418,4 @@ CLINC150,Accuracy,0.5,Local Attention,0.56
 CLINC150,Accuracy,0.6,Local Attention,0.59
 CLINC150,Accuracy,0.7,Local Attention,0.62
 CLINC150,Accuracy,0.8,Local Attention,0.65
-CLINC150,Accuracy,0.9,Local Attention,0.68
+CLINC150,Accuracy,1.0,Local Attention,0.68
