@@ -3,8 +3,8 @@ library(tidyverse)
 data <- read_csv("data/perf_1.csv") %>%
   mutate(
     tokens = fct_inorder(tokens),
-    method = fct_relevel(method, "Vanilla", "WG-KV"),
-    component = fct_relevel(component, "Non-Attention", "Attention")
+    method = fct_inorder(method),
+    component = fct_inorder(component)
   ) %>%
   group_by(tokens, method) %>%
   mutate(total_latency = sum(latency)) %>%

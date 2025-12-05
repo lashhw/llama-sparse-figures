@@ -3,7 +3,7 @@ library(tidyverse)
 data <- read_csv("data/breakdown_2.csv") %>%
   mutate(
     tokens = fct_rev(fct_inorder(tokens)),
-    component = fct_relevel(component, "Model Weights", "KV Cache")
+    component = fct_inorder(component)
   )
 
 fig <- ggplot(data, aes(x = memory, y = tokens, fill = component, colour = component)) +

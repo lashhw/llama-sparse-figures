@@ -2,9 +2,9 @@ library(tidyverse)
 
 data <- read_csv("data/breakdown_1.csv") %>%
   mutate(
-    stage = fct_relevel(stage, "(a) Prefill Latency", "(b) Decode Latency"),
+    stage = fct_inorder(stage),
     tokens = fct_rev(fct_inorder(tokens)),
-    component = fct_relevel(component, "MLP", "Other", "Attention")
+    component = fct_inorder(component)
   )
 
 fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = component)) +
