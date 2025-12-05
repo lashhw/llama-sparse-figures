@@ -6,8 +6,8 @@ kv_low <- 0.1
 
 points <- tibble(
   point = factor(
-    c("Vanilla", "QUEST", "WG-KV", "WG-KV + QUEST"),
-    levels = c("Vanilla", "QUEST", "WG-KV", "WG-KV + QUEST")
+    c("Vanilla", "WG-KV Only", "QUEST Only", "WG-KV + QUEST"),
+    levels = c("Vanilla", "WG-KV Only", "QUEST Only", "WG-KV + QUEST")
   ),
   kv_size = c(1.0, 1.0, kv_mid, kv_mid),
   kv_read = c(1.0, kv_low, kv_mid, kv_low)
@@ -16,16 +16,16 @@ points <- tibble(
 fig <- ggplot(points, aes(x = kv_size, y = kv_read, fill = point, colour = point, starshape = point, size = point)) +
   geom_star(starstroke = 1) +
   scale_fill_manual(
-    values = c("Vanilla" = "#F5F5F5", "QUEST" = "#D5E8D4", "WG-KV" = "#DAE8FC", "WG-KV + QUEST" = "#FFE6CC")
+    values = c("Vanilla" = "#F5F5F5", "WG-KV Only" = "#DAE8FC", "QUEST Only" = "#D5E8D4", "WG-KV + QUEST" = "#FFE6CC")
   ) +
   scale_colour_manual(
-    values = c("Vanilla" = "#666666", "QUEST" = "#82B366", "WG-KV" = "#6C8EBF", "WG-KV + QUEST" = "#D79B00")
+    values = c("Vanilla" = "#666666", "WG-KV Only" = "#6C8EBF", "QUEST Only" = "#82B366", "WG-KV + QUEST" = "#D79B00")
   ) +
   scale_starshape_manual(
-    values = c("Vanilla" = 15, "QUEST" = 11, "WG-KV" = 13, "WG-KV + QUEST" = 5)
+    values = c("Vanilla" = 15, "WG-KV Only" = 13, "QUEST Only" = 11, "WG-KV + QUEST" = 5)
   ) +
   scale_size_manual(
-    values = c("Vanilla" = 3.2, "QUEST" = 3.7, "WG-KV" = 3.2, "WG-KV + QUEST" = 3.5)
+    values = c("Vanilla" = 3.2, "WG-KV Only" = 3.2, "QUEST Only" = 3.7, "WG-KV + QUEST" = 3.5)
   ) +
   scale_x_continuous(
     limits = c(0, 1),
@@ -59,4 +59,4 @@ fig <- ggplot(points, aes(x = kv_size, y = kv_read, fill = point, colour = point
     axis.title.y = element_text(size = 11),
   )
 
-ggsave("pareto.pdf", fig, width = 3.0, height = 3.0, units = "in")
+ggsave("pareto.pdf", fig, width = 3.5, height = 3.0, units = "in")
