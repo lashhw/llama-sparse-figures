@@ -24,7 +24,7 @@ fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = comp
   labs(x = "Normalized Time", y = NULL) +
   theme_minimal(base_size = 18) +
   theme(
-    strip.text = element_text(size = 24),
+    strip.text = element_text(size = 21, face = "bold"),
     legend.position = "top",
     legend.title = element_blank(),
     legend.text = element_text(size = 18),

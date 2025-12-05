@@ -47,7 +47,7 @@ fig <- ggplot(data, aes(x = method, y = size, fill = component, colour = compone
   ) +
   theme_minimal(base_size = 18) +
   theme(
-    plot.title = element_text(size = 28, hjust = 0.5),
+    plot.title = element_text(size = 24, hjust = 0.5, face = "bold"),
     legend.position = "top",
     legend.title = element_blank(),
     legend.text = element_text(size = 18),
