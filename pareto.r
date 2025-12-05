@@ -1,0 +1,62 @@
+library(tidyverse)
+library(ggstar)
+
+kv_mid <- 0.3
+kv_low <- 0.1
+
+points <- tibble(
+  point = factor(
+    c("Vanilla", "QUEST", "WG-KV", "WG-KV + QUEST"),
+    levels = c("Vanilla", "QUEST", "WG-KV", "WG-KV + QUEST")
+  ),
+  kv_size = c(1.0, 1.0, kv_mid, kv_mid),
+  kv_read = c(1.0, kv_low, kv_mid, kv_low)
+)
+
+fig <- ggplot(points, aes(x = kv_size, y = kv_read, fill = point, colour = point, starshape = point, size = point)) +
+  geom_star(starstroke = 1) +
+  scale_fill_manual(
+    values = c("Vanilla" = "#F5F5F5", "QUEST" = "#D5E8D4", "WG-KV" = "#DAE8FC", "WG-KV + QUEST" = "#FFE6CC")
+  ) +
+  scale_colour_manual(
+    values = c("Vanilla" = "#666666", "QUEST" = "#82B366", "WG-KV" = "#6C8EBF", "WG-KV + QUEST" = "#D79B00")
+  ) +
+  scale_starshape_manual(
+    values = c("Vanilla" = 15, "QUEST" = 11, "WG-KV" = 13, "WG-KV + QUEST" = 5)
+  ) +
+  scale_size_manual(
+    values = c("Vanilla" = 3.2, "QUEST" = 3.7, "WG-KV" = 3.2, "WG-KV + QUEST" = 3.5)
+  ) +
+  scale_x_continuous(
+    limits = c(0, 1),
+    breaks = seq(0, 1, by = 0.2),
+    expand = c(0, 0)
+  ) +
+  scale_y_continuous(
+    limits = c(0, 1),
+    breaks = seq(0, 1, by = 0.2),
+    expand = c(0, 0)
+  ) +
+  labs(
+    x = "KV Size (Relative)",
+    y = "KV Read (Relative)"
+  ) +
+  coord_cartesian(ratio = 1, clip = "off") +
+  guides(
+    fill = guide_legend(nrow = 2, byrow = TRUE),
+    colour = guide_legend(nrow = 2, byrow = TRUE),
+    starshape = guide_legend(nrow = 2, byrow = TRUE),
+    size = guide_legend(nrow = 2, byrow = TRUE)
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "top",
+    legend.title = element_blank(),
+    legend.text = element_text(size = 10),
+    axis.text.x = element_text(size = 10, colour = "black"),
+    axis.text.y = element_text(size = 10, colour = "black"),
+    axis.title.x = element_text(size = 11),
+    axis.title.y = element_text(size = 11),
+  )
+
+ggsave("pareto.pdf", fig, width = 3.0, height = 3.0, units = "in")
