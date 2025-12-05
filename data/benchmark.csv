@@ -119,36 +119,6 @@ HotpotQA,Accuracy,0.6,Local Attention,0.59
 HotpotQA,Accuracy,0.7,Local Attention,0.62
 HotpotQA,Accuracy,0.8,Local Attention,0.65
 HotpotQA,Accuracy,1.0,Local Attention,0.68
-MS MACRO,F1 Score,0.0,WG-KV,0.55
-MS MACRO,F1 Score,0.1,WG-KV,0.58
-MS MACRO,F1 Score,0.2,WG-KV,0.61
-MS MACRO,F1 Score,0.3,WG-KV,0.64
-MS MACRO,F1 Score,0.4,WG-KV,0.67
-MS MACRO,F1 Score,0.5,WG-KV,0.70
-MS MACRO,F1 Score,0.6,WG-KV,0.74
-MS MACRO,F1 Score,0.7,WG-KV,0.78
-MS MACRO,F1 Score,0.8,WG-KV,0.82
-MS MACRO,F1 Score,1.0,WG-KV,0.86
-MS MACRO,F1 Score,0.0,DuoAttention,0.50
-MS MACRO,F1 Score,0.1,DuoAttention,0.52
-MS MACRO,F1 Score,0.2,DuoAttention,0.55
-MS MACRO,F1 Score,0.3,DuoAttention,0.58
-MS MACRO,F1 Score,0.4,DuoAttention,0.60
-MS MACRO,F1 Score,0.5,DuoAttention,0.63
-MS MACRO,F1 Score,0.6,DuoAttention,0.66
-MS MACRO,F1 Score,0.7,DuoAttention,0.69
-MS MACRO,F1 Score,0.8,DuoAttention,0.72
-MS MACRO,F1 Score,1.0,DuoAttention,0.75
-MS MACRO,F1 Score,0.0,Local Attention,0.45
-MS MACRO,F1 Score,0.1,Local Attention,0.47
-MS MACRO,F1 Score,0.2,Local Attention,0.50
-MS MACRO,F1 Score,0.3,Local Attention,0.52
-MS MACRO,F1 Score,0.4,Local Attention,0.54
-MS MACRO,F1 Score,0.5,Local Attention,0.56
-MS MACRO,F1 Score,0.6,Local Attention,0.59
-MS MACRO,F1 Score,0.7,Local Attention,0.62
-MS MACRO,F1 Score,0.8,Local Attention,0.65
-MS MACRO,F1 Score,1.0,Local Attention,0.68
 NarrativeQA,F1 Score,0.0,WG-KV,0.55
 NarrativeQA,F1 Score,0.1,WG-KV,0.58
 NarrativeQA,F1 Score,0.2,WG-KV,0.61
@@ -239,6 +209,36 @@ InfiniteBench MC,NDCG@10,0.6,Local Attention,0.59
 InfiniteBench MC,NDCG@10,0.7,Local Attention,0.62
 InfiniteBench MC,NDCG@10,0.8,Local Attention,0.65
 InfiniteBench MC,NDCG@10,1.0,Local Attention,0.68
+MS MACRO,F1 Score,0.0,WG-KV,0.55
+MS MACRO,F1 Score,0.1,WG-KV,0.58
+MS MACRO,F1 Score,0.2,WG-KV,0.61
+MS MACRO,F1 Score,0.3,WG-KV,0.64
+MS MACRO,F1 Score,0.4,WG-KV,0.67
+MS MACRO,F1 Score,0.5,WG-KV,0.70
+MS MACRO,F1 Score,0.6,WG-KV,0.74
+MS MACRO,F1 Score,0.7,WG-KV,0.78
+MS MACRO,F1 Score,0.8,WG-KV,0.82
+MS MACRO,F1 Score,1.0,WG-KV,0.86
+MS MACRO,F1 Score,0.0,DuoAttention,0.50
+MS MACRO,F1 Score,0.1,DuoAttention,0.52
+MS MACRO,F1 Score,0.2,DuoAttention,0.55
+MS MACRO,F1 Score,0.3,DuoAttention,0.58
+MS MACRO,F1 Score,0.4,DuoAttention,0.60
+MS MACRO,F1 Score,0.5,DuoAttention,0.63
+MS MACRO,F1 Score,0.6,DuoAttention,0.66
+MS MACRO,F1 Score,0.7,DuoAttention,0.69
+MS MACRO,F1 Score,0.8,DuoAttention,0.72
+MS MACRO,F1 Score,1.0,DuoAttention,0.75
+MS MACRO,F1 Score,0.0,Local Attention,0.45
+MS MACRO,F1 Score,0.1,Local Attention,0.47
+MS MACRO,F1 Score,0.2,Local Attention,0.50
+MS MACRO,F1 Score,0.3,Local Attention,0.52
+MS MACRO,F1 Score,0.4,Local Attention,0.54
+MS MACRO,F1 Score,0.5,Local Attention,0.56
+MS MACRO,F1 Score,0.6,Local Attention,0.59
+MS MACRO,F1 Score,0.7,Local Attention,0.62
+MS MACRO,F1 Score,0.8,Local Attention,0.65
+MS MACRO,F1 Score,1.0,Local Attention,0.68
 InfiniteBench Sum,F1 Score,0.0,WG-KV,0.55
 InfiniteBench Sum,F1 Score,0.1,WG-KV,0.58
 InfiniteBench Sum,F1 Score,0.2,WG-KV,0.61
