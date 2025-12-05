@@ -50,7 +50,7 @@ plot_list <- map(seq_along(y_labels), \(id) {
       breaks = seq(0, 1, by = 0.2)
     ) +
     labs(
-      x = "KV Ratio",
+      x = "KV Budget",
       y = y_label,
       title = panel_label
     ) +
