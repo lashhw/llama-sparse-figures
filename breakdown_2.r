@@ -1,16 +1,6 @@
 library(tidyverse)
 
-data <- tribble(
-  ~tokens, ~component,       ~memory,
-  "100K",  "Model Weights",  15,
-  "100K",  "KV Cache",       12,
-  "200K",  "Model Weights",  15,
-  "200K",  "KV Cache",       30,
-  "300K",  "Model Weights",  15,
-  "300K",  "KV Cache",       60,
-  "400K",  "Model Weights",  15,
-  "400K",  "KV Cache",       75,
-)
+data <- read_csv("data/breakdown_2.csv")
 
 data <- data %>%
   mutate(
@@ -38,4 +28,4 @@ fig <- ggplot(data, aes(x = memory, y = tokens, fill = component, colour = compo
     panel.grid.major.y = element_blank(),
   )
 
-ggsave("breakdown_2.pdf", fig, width = 3.5, height = 4.0, units = "in")
+ggsave("breakdown_2.pdf", fig, width = 3.7, height = 4.0, units = "in")

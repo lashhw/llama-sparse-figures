@@ -1,0 +1,25 @@
+stage,tokens,component,latency
+(a) Prefill Latency,100K,MLP,0.40
+(a) Prefill Latency,100K,Other,0.18
+(a) Prefill Latency,100K,Attention,0.42
+(a) Prefill Latency,200K,MLP,0.32
+(a) Prefill Latency,200K,Other,0.18
+(a) Prefill Latency,200K,Attention,0.50
+(a) Prefill Latency,300K,MLP,0.26
+(a) Prefill Latency,300K,Other,0.18
+(a) Prefill Latency,300K,Attention,0.56
+(a) Prefill Latency,400K,MLP,0.22
+(a) Prefill Latency,400K,Other,0.12
+(a) Prefill Latency,400K,Attention,0.66
+(b) Decode Latency,100K,MLP,0.36
+(b) Decode Latency,100K,Other,0.22
+(b) Decode Latency,100K,Attention,0.42
+(b) Decode Latency,200K,MLP,0.30
+(b) Decode Latency,200K,Other,0.22
+(b) Decode Latency,200K,Attention,0.48
+(b) Decode Latency,300K,MLP,0.24
+(b) Decode Latency,300K,Other,0.24
+(b) Decode Latency,300K,Attention,0.52
+(b) Decode Latency,400K,MLP,0.22
+(b) Decode Latency,400K,Other,0.18
+(b) Decode Latency,400K,Attention,0.60

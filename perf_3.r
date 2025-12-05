@@ -1,24 +1,6 @@
 library(tidyverse)
 
-data <- tribble(
-  ~tokens,  ~method,   ~component,       ~size,
-  "200K",   "Vanilla", "Model Weights",  2,
-  "200K",   "Vanilla", "KV Cache",       10,
-  "200K",   "WG-KV",   "Model Weights",  2,
-  "200K",   "WG-KV",   "KV Cache",       3,
-  "300K",   "Vanilla", "Model Weights",  4,
-  "300K",   "Vanilla", "KV Cache",       40,
-  "300K",   "WG-KV",   "Model Weights",  4,
-  "300K",   "WG-KV",   "KV Cache",       12,
-  "400K",   "Vanilla", "Model Weights",  6,
-  "400K",   "Vanilla", "KV Cache",       90,
-  "400K",   "WG-KV",   "Model Weights",  6,
-  "400K",   "WG-KV",   "KV Cache",       25,
-  "500K",   "Vanilla", "Model Weights",  NA,
-  "500K",   "Vanilla", "KV Cache",       NA,
-  "500K",   "WG-KV",   "Model Weights",  8,
-  "500K",   "WG-KV",   "KV Cache",       45,
-)
+data <- read_csv("data/perf_3.csv")
 
 data <- data %>%
   mutate(

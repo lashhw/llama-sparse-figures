@@ -1,0 +1,9 @@
+tokens,component,memory
+100K,Model Weights,15
+100K,KV Cache,12
+200K,Model Weights,15
+200K,KV Cache,30
+300K,Model Weights,15
+300K,KV Cache,60
+400K,Model Weights,15
+400K,KV Cache,75

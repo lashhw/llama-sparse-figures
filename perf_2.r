@@ -1,24 +1,6 @@
 library(tidyverse)
 
-data <- tribble(
-  ~tokens,  ~method,   ~component,       ~latency,
-  "200K",   "Vanilla", "Non-Attention",  2,
-  "200K",   "Vanilla", "Attention",      10,
-  "200K",   "WG-KV",   "Non-Attention",  2,
-  "200K",   "WG-KV",   "Attention",      3,
-  "300K",   "Vanilla", "Non-Attention",  4,
-  "300K",   "Vanilla", "Attention",      40,
-  "300K",   "WG-KV",   "Non-Attention",  4,
-  "300K",   "WG-KV",   "Attention",      12,
-  "400K",   "Vanilla", "Non-Attention",  6,
-  "400K",   "Vanilla", "Attention",      90,
-  "400K",   "WG-KV",   "Non-Attention",  6,
-  "400K",   "WG-KV",   "Attention",      25,
-  "500K",   "Vanilla", "Non-Attention",  NA,
-  "500K",   "Vanilla", "Attention",      NA,
-  "500K",   "WG-KV",   "Non-Attention",  8,
-  "500K",   "WG-KV",   "Attention",      45,
-)
+data <- read_csv("data/perf_2.csv")
 
 data <- data %>%
   mutate(
