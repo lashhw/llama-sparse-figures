@@ -9,8 +9,8 @@ points <- tibble(
     c("Full Attention", "WG-KV Only", "QUEST Only", "WG-KV + QUEST"),
     levels = c("Full Attention", "WG-KV Only", "QUEST Only", "WG-KV + QUEST")
   ),
-  kv_size = c(1.0, 1.0, kv_mid, kv_mid),
-  kv_read = c(1.0, kv_low, kv_mid, kv_low)
+  kv_size = c(1.0, kv_mid, 1.0, kv_mid),
+  kv_read = c(1.0, kv_mid, kv_low, kv_low)
 )
 
 fig <- ggplot(points, aes(x = kv_size, y = kv_read, fill = point, colour = point, starshape = point, size = point)) +
