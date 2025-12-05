@@ -15,7 +15,7 @@ read_gate_matrix <- function(path, panel_label) {
 }
 
 data <- bind_rows(
-  read_gate_matrix("data/gate_1.csv", "(a) Book Summarization"),
+  read_gate_matrix("data/gate_1.csv", "(a) Code Summarization"),
   read_gate_matrix("data/gate_2.csv", "(b) HTML to TSV")
 ) %>%
   mutate(panel = fct_inorder(panel))
