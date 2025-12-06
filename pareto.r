@@ -38,8 +38,8 @@ fig <- ggplot(points, aes(x = kv_size, y = kv_read, fill = point, colour = point
     expand = c(0, 0)
   ) +
   labs(
-    x = "KV Size (Relative)",
-    y = "KV Read (Relative)"
+    x = "Normalized KV Size",
+    y = "Normalized KV Read"
   ) +
   coord_cartesian(ratio = 1, clip = "off") +
   guides(
