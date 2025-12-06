@@ -43,7 +43,7 @@ fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = comp
   labs(
     title = "(a) Prefill Latency",
     x = NULL,
-    y = "Time to First Token (s)",
+    y = "TTFT (s)",
   ) +
   theme_minimal(base_size = 18) +
   theme(
@@ -51,9 +51,10 @@ fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = comp
     legend.position = "top",
     legend.title = element_blank(),
     legend.text = element_text(size = 18),
-    axis.text.x = element_blank(),
+    axis.text.x = element_text(size = 14, colour = "black", angle = 30, hjust = 1),
     axis.text.y = element_text(size = 16, colour = "black"),
     strip.text.x = element_text(size = 20),
+    strip.placement = "outside",
     panel.spacing = unit(0, "cm"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor.x = element_blank(),
