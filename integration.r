@@ -47,7 +47,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         keywidth = 1.7
       )) +
       labs(
-        x = "KV Budget",
+        x = "KV Cache Size",
         y = axis_label,
         title = panel_label
       ) +
