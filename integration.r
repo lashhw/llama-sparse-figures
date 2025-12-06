@@ -38,9 +38,9 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
           "Full Attention" = "#666666"
         )
       ) +
-      scale_x_continuous(
-        limits = c(0, max(panel_data$kv_attended, na.rm = TRUE)),
-        breaks = scales::pretty_breaks(n = 6),
+      scale_x_log10(
+        limits = c(320, max(panel_data$kv_attended, na.rm = TRUE)),
+        breaks = c(320, 1024, 4096, 16384),
         expand = c(0, 0)
       ) +
       guides(colour = guide_legend(
@@ -58,7 +58,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         plot.title = element_text(size = 13, hjust = 0.5),
         legend.title = element_blank(),
         legend.text = element_text(size = 15),
-        axis.text.x = element_text(size = 10, colour = "black"),
+        axis.text.x = element_text(size = 10, colour = "black", angle = 17, hjust = 1),
         axis.text.y = element_text(size = 10, colour = "black"),
         axis.title.x = element_text(size = 11),
         axis.title.y = element_text(size = 11),
@@ -68,4 +68,4 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
 fig <- wrap_plots(fig_list, ncol = 7, guides = "collect") &
   theme(legend.position = "bottom")
 
-ggsave("integration.pdf", fig, width = 14.0, height = 4.5, units = "in")
+ggsave("integration.pdf", fig, width = 14.0, height = 4.7, units = "in")
