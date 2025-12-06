@@ -2,7 +2,7 @@ library(tidyverse)
 
 read_gate_matrix <- function(path, panel_label) {
   read_csv(path) %>%
-    mutate(layer_index = row_number()) %>%
+    mutate(layer_index = row_number() - 1) %>%
     pivot_longer(
       cols = starts_with("head_"),
       names_to = "head_index",
@@ -29,12 +29,12 @@ fig <- ggplot(data, aes(x = layer_index, y = head_index, fill = gate_value)) +
     option = "viridis",
   ) +
   scale_x_continuous(
-    breaks = seq(4, 32, by = 4),
+    breaks = c(seq(0, 28, by = 4), 31),
     expand = expansion(mult = 0),
     position = "top"
   ) +
   scale_y_reverse(
-    breaks = seq(1, 8, by = 1),
+    breaks = seq(0, 7, by = 1),
     expand = expansion(mult = 0)
   ) +
   guides(
