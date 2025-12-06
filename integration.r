@@ -17,12 +17,13 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
     filter(panel_title == panel_label, y_label == axis_label)
 
   full_attention_score <- panel_data %>%
-    filter(method == "QUEST Only", kv_size == 1) %>%
+    filter(method == "QUEST Only") %>%
+    arrange(desc(kv_attended)) %>%
     pull(score) %>%
     first()
 
   panel_data %>%
-    ggplot(aes(x = kv_size, y = score, colour = method)) +
+    ggplot(aes(x = kv_attended, y = score, colour = method)) +
       geom_hline(
         aes(yintercept = full_attention_score, colour = "Full Attention"),
         linetype = "dashed",
@@ -38,8 +39,8 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         )
       ) +
       scale_x_continuous(
-        limits = c(0, 1),
-        breaks = seq(0, 1, by = 0.2),
+        limits = c(0, max(panel_data$kv_attended, na.rm = TRUE)),
+        breaks = scales::pretty_breaks(n = 6),
         expand = c(0, 0)
       ) +
       guides(colour = guide_legend(
@@ -47,7 +48,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         keywidth = 1.7
       )) +
       labs(
-        x = "KV Cache Size",
+        x = "# KV Attended / Token",
         y = axis_label,
         title = panel_label
       ) +
