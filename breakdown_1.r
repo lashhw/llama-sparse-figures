@@ -9,6 +9,18 @@ data <- read_csv("data/breakdown_1.csv") %>%
 
 fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = component)) +
   geom_col(width = 0.75, position = position_stack(reverse = TRUE)) +
+  geom_text(
+    data = data %>% filter(component == "Attention"),
+    aes(
+      x = 0.97,
+      y = tokens,
+      label = scales::percent(latency, accuracy = 1)
+    ),
+    colour = "#B85450",
+    size = 5.5,
+    inherit.aes = FALSE,
+    hjust = 1
+  ) +
   facet_grid(. ~ stage) +
   scale_fill_manual(
     values = c("Non-Attention" = "#DAE8FC", "Attention" = "#F8CECC"),
