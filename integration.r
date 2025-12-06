@@ -17,12 +17,12 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
     filter(panel_title == panel_label, y_label == axis_label)
 
   full_attention_score <- panel_data %>%
-    filter(method == "QUEST Only", kv_budget == 1) %>%
+    filter(method == "QUEST Only", kv_size == 1) %>%
     pull(score) %>%
     first()
 
   panel_data %>%
-    ggplot(aes(x = kv_budget, y = score, colour = method)) +
+    ggplot(aes(x = kv_size, y = score, colour = method)) +
       geom_hline(
         aes(yintercept = full_attention_score, colour = "Full Attention"),
         linetype = "dashed",
