@@ -11,10 +11,12 @@ fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = comp
   geom_col(width = 0.75, position = position_stack(reverse = TRUE)) +
   facet_grid(. ~ stage) +
   scale_fill_manual(
-    values = c(MLP = "#DAE8FC", Other = "#FFF2CC", Attention = "#F8CECC"),
+    values = c("Non-Attention" = "#DAE8FC", "Attention" = "#F8CECC"),
+    labels = c("Non-Attention" = "MLP + QKV Proj + Other", "Attention" = "Attention"),
   ) +
   scale_colour_manual(
-    values = c(MLP = "#6C8EBF", Other = "#D6B656", Attention = "#B85450"),
+    values = c("Non-Attention" = "#6C8EBF", "Attention" = "#B85450"),
+    labels = c("Non-Attention" = "MLP + QKV Proj + Other", "Attention" = "Attention"),
   ) +
   scale_x_continuous(
     limits = c(0, 1),
