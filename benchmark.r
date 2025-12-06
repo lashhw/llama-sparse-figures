@@ -13,13 +13,25 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
   panel_label <- panel_info$panel_title[[idx]]
   axis_label <- panel_info$y_label[[idx]]
 
-  data %>%
-    filter(panel_title == panel_label, y_label == axis_label) %>%
+  panel_data <- data %>%
+    filter(panel_title == panel_label, y_label == axis_label)
+
+  full_attention_score <- panel_data %>%
+    filter(method == "WG-KV", kv_budget == 1) %>%
+    pull(score) %>%
+    first()
+
+  panel_plot <- panel_data %>%
     ggplot(aes(x = kv_budget, y = score, colour = method)) +
       geom_line(linewidth = 1) +
       geom_point(size = 2) +
       scale_colour_manual(
-        values = c("WG-KV" = "#6C8EBF", "DuoAttention" = "#D6B656", "Local Attention" = "#B85450")
+        values = c(
+          "WG-KV" = "#6C8EBF",
+          "DuoAttention" = "#D6B656",
+          "Local Attention" = "#B85450",
+          "Full Attention" = "#666666"
+        )
       ) +
       scale_x_continuous(
         limits = c(0, 1),
@@ -42,6 +54,16 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         axis.title.x = element_text(size = 11),
         axis.title.y = element_text(size = 11),
       )
+
+  panel_plot <- panel_plot +
+    geom_hline(
+      aes(yintercept = full_attention_score, colour = "Full Attention"),
+      linetype = "dashed",
+      linewidth = 0.8
+    ) +
+    guides(colour = guide_legend(override.aes = list(linetype = "solid")))
+
+  panel_plot
 })
 
 fig <- wrap_plots(fig_list, ncol = 7, guides = "collect") &
