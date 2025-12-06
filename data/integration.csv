@@ -75,9 +75,9 @@ NarrativeQA,GPT-4.1 Score,1024,QUEST Only,NA
 NarrativeQA,GPT-4.1 Score,512,QUEST Only,NA
 NarrativeQA,GPT-4.1 Score,320,QUEST Only,NA
 InfiniteBench QA,F1,9451.595,WG-KV + QUEST,35.1057992987405
-InfiniteBench QA,F1,8192,WG-KV + QUEST,NA
-InfiniteBench QA,F1,4096,WG-KV + QUEST,NA
-InfiniteBench QA,F1,2048,WG-KV + QUEST,NA
+InfiniteBench QA,F1,8192,WG-KV + QUEST,35.2244140173552
+InfiniteBench QA,F1,4096,WG-KV + QUEST,34.1038012967425
+InfiniteBench QA,F1,2048,WG-KV + QUEST,35.2126924056336
 InfiniteBench QA,F1,1024,WG-KV + QUEST,33.3880892310304
 InfiniteBench QA,F1,512,WG-KV + QUEST,33.2592125521537
 InfiniteBench QA,F1,320,WG-KV + QUEST,27.1363837143249
@@ -90,12 +90,12 @@ InfiniteBench QA,F1,1024,QUEST Only,32.1382143999791
 InfiniteBench QA,F1,512,QUEST Only,31.2669301286948
 InfiniteBench QA,F1,320,QUEST Only,27.0195459339422
 InfiniteBench MC,Accuracy,9427.79875,WG-KV + QUEST,51
-InfiniteBench MC,Accuracy,8192,WG-KV + QUEST,NA
-InfiniteBench MC,Accuracy,4096,WG-KV + QUEST,NA
-InfiniteBench MC,Accuracy,2048,WG-KV + QUEST,NA
-InfiniteBench MC,Accuracy,1024,WG-KV + QUEST,NA
-InfiniteBench MC,Accuracy,512,WG-KV + QUEST,NA
-InfiniteBench MC,Accuracy,320,WG-KV + QUEST,NA
+InfiniteBench MC,Accuracy,8192,WG-KV + QUEST,51
+InfiniteBench MC,Accuracy,4096,WG-KV + QUEST,51
+InfiniteBench MC,Accuracy,2048,WG-KV + QUEST,51
+InfiniteBench MC,Accuracy,1024,WG-KV + QUEST,51
+InfiniteBench MC,Accuracy,512,WG-KV + QUEST,51
+InfiniteBench MC,Accuracy,320,WG-KV + QUEST,51
 InfiniteBench MC,Accuracy,29286.28,QUEST Only,53
 InfiniteBench MC,Accuracy,16384,QUEST Only,53
 InfiniteBench MC,Accuracy,8192,QUEST Only,53
