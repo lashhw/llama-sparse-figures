@@ -60,4 +60,4 @@ fig <- ggplot(data, aes(x = method, y = size, fill = component, colour = compone
     panel.grid.minor.x = element_blank(),
   )
 
-ggsave("perf_3.pdf", fig, width = 5.0, height = 4.0, units = "in")
+ggsave("perf_3.pdf", fig, width = 5.0, height = 4.5, units = "in")

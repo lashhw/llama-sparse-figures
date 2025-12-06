@@ -60,4 +60,4 @@ fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = comp
     panel.grid.minor.x = element_blank(),
   )
 
-ggsave("perf_2.pdf", fig, width = 5.0, height = 4.0, units = "in")
+ggsave("perf_2.pdf", fig, width = 5.0, height = 4.5, units = "in")
