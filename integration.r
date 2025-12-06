@@ -13,19 +13,39 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
   panel_label <- panel_info$panel_title[[idx]]
   axis_label <- panel_info$y_label[[idx]]
 
-  data %>%
-    filter(panel_title == panel_label, y_label == axis_label) %>%
+  panel_data <- data %>%
+    filter(panel_title == panel_label, y_label == axis_label)
+
+  full_attention_score <- panel_data %>%
+    filter(method == "QUEST Only", kv_budget == 1) %>%
+    pull(score) %>%
+    first()
+
+  panel_data %>%
     ggplot(aes(x = kv_budget, y = score, colour = method)) +
+      geom_hline(
+        aes(yintercept = full_attention_score, colour = "Full Attention"),
+        linetype = "dashed",
+        linewidth = 0.9
+      ) +
       geom_line(linewidth = 1) +
       geom_point(size = 2) +
       scale_colour_manual(
-        values = c("QUEST Only" = "#82B366", "WG-KV + QUEST" = "#D79B00")
+        values = c(
+          "WG-KV + QUEST" = "#D79B00",
+          "QUEST Only" = "#82B366",
+          "Full Attention" = "#666666"
+        )
       ) +
       scale_x_continuous(
         limits = c(0, 1),
         breaks = seq(0, 1, by = 0.2),
         expand = c(0, 0)
       ) +
+      guides(colour = guide_legend(
+        override.aes = list(linetype = "solid", linewidth = 1.5, size = 3),
+        keywidth = 1.7
+      )) +
       labs(
         x = "KV Budget",
         y = axis_label,
