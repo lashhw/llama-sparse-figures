@@ -45,7 +45,7 @@ fig <- ggplot(data, aes(x = layer_index, y = head_index, fill = gate_value)) +
   ) +
   labs(
     x = "Layer Index",
-    y = "Head Index"
+    y = "KV Head Index"
   ) +
   coord_fixed() +
   theme_minimal(base_size = 20) +
