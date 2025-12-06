@@ -39,7 +39,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         )
       ) +
       scale_x_log10(
-        limits = c(320, max(panel_data$kv_attended, na.rm = TRUE)),
+        limits = range(panel_data$kv_attended, na.rm = TRUE),
         breaks = c(320, 1024, 4096, 16384),
         expand = c(0, 0)
       ) +
