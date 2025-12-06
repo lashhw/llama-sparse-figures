@@ -21,8 +21,13 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
     pull(score) %>%
     first()
 
-  panel_plot <- panel_data %>%
+  panel_data %>%
     ggplot(aes(x = kv_budget, y = score, colour = method)) +
+      geom_hline(
+        aes(yintercept = full_attention_score, colour = "Full Attention"),
+        linetype = "dashed",
+        linewidth = 0.9
+      ) +
       geom_line(linewidth = 1) +
       geom_point(size = 2) +
       scale_colour_manual(
@@ -38,6 +43,10 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         breaks = seq(0, 1, by = 0.2),
         expand = c(0, 0)
       ) +
+      guides(colour = guide_legend(
+        override.aes = list(linetype = "solid", linewidth = 1.5, size = 3),
+        keywidth = 1.7
+      )) +
       labs(
         x = "KV Budget",
         y = axis_label,
@@ -54,16 +63,6 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         axis.title.x = element_text(size = 11),
         axis.title.y = element_text(size = 11),
       )
-
-  panel_plot <- panel_plot +
-    geom_hline(
-      aes(yintercept = full_attention_score, colour = "Full Attention"),
-      linetype = "dashed",
-      linewidth = 0.8
-    ) +
-    guides(colour = guide_legend(override.aes = list(linetype = "solid")))
-
-  panel_plot
 })
 
 fig <- wrap_plots(fig_list, ncol = 7, guides = "collect") &
