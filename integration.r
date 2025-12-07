@@ -3,7 +3,12 @@ library(patchwork)
 
 data <- read_csv("data/integration.csv") %>%
   mutate(
-    method = fct_inorder(method)
+    method = fct_inorder(method),
+    score = case_when(
+      panel_title == "NarrativeQA" ~ score * (100 / 3),
+      panel_title == "InfiniteBench Sum" | panel_title == "Multi-LexSum" ~ score * 100,
+      TRUE ~ score
+    )
   )
 
 panel_info <- data %>%
