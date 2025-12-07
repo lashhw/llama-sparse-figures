@@ -10,7 +10,6 @@ fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda)) +
   scale_colour_brewer(palette = "Dark2") +
   scale_x_log10(
     breaks = scales::log_breaks(n = 6),
-    labels = scales::label_number(),
     expand = expansion(mult = c(0, 0.02))
   ) +
   scale_y_continuous(
