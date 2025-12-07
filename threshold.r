@@ -19,7 +19,7 @@ fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda)) +
   ) +
   guides(colour = guide_legend(nrow = 2, byrow = TRUE)) +
   labs(
-    x = "KV Cache Size (log scale)",
+    x = "Normalized KV Cache Size (log scale)",
     y = "Distillation Loss",
     colour = expression(lambda)
   ) +
