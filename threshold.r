@@ -4,7 +4,7 @@ data <- read_csv("data/threshold.csv") %>%
   arrange(lambda, threshold) %>%
   mutate(lambda = factor(lambda, levels = sort(unique(lambda))))
 
-fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda, group = lambda)) +
+fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.3) +
   scale_colour_brewer(palette = "Dark2") +
@@ -27,7 +27,7 @@ fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda, group = 
   coord_cartesian(clip = "off") +
   theme_minimal(base_size = 18) +
   theme(
-    legend.position = "bottom",
+    legend.position = "top",
     legend.title = element_text(size = 16),
     legend.text = element_text(size = 14),
     axis.text.x = element_text(size = 13, colour = "black"),
