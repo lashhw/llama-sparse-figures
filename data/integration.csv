@@ -60,20 +60,20 @@ HotpotQA,Accuracy,1024,QUEST Only,56.6666666666667
 HotpotQA,Accuracy,512,QUEST Only,51.3333333333333
 HotpotQA,Accuracy,320,QUEST Only,44
 NarrativeQA,GPT-4.1 Score,9153.386875,WG-KV + QUEST,1.27
-NarrativeQA,GPT-4.1 Score,8192,WG-KV + QUEST,NA
-NarrativeQA,GPT-4.1 Score,4096,WG-KV + QUEST,NA
-NarrativeQA,GPT-4.1 Score,2048,WG-KV + QUEST,NA
-NarrativeQA,GPT-4.1 Score,1024,WG-KV + QUEST,NA
-NarrativeQA,GPT-4.1 Score,512,WG-KV + QUEST,NA
-NarrativeQA,GPT-4.1 Score,320,WG-KV + QUEST,NA
+NarrativeQA,GPT-4.1 Score,8192,WG-KV + QUEST,1.3
+NarrativeQA,GPT-4.1 Score,4096,WG-KV + QUEST,1.31
+NarrativeQA,GPT-4.1 Score,2048,WG-KV + QUEST,1.33
+NarrativeQA,GPT-4.1 Score,1024,WG-KV + QUEST,1.31
+NarrativeQA,GPT-4.1 Score,512,WG-KV + QUEST,1.29
+NarrativeQA,GPT-4.1 Score,320,WG-KV + QUEST,1.11
 NarrativeQA,GPT-4.1 Score,28090.98,QUEST Only,1.3
-NarrativeQA,GPT-4.1 Score,16384,QUEST Only,NA
-NarrativeQA,GPT-4.1 Score,8192,QUEST Only,NA
-NarrativeQA,GPT-4.1 Score,4096,QUEST Only,NA
-NarrativeQA,GPT-4.1 Score,2048,QUEST Only,NA
-NarrativeQA,GPT-4.1 Score,1024,QUEST Only,NA
-NarrativeQA,GPT-4.1 Score,512,QUEST Only,NA
-NarrativeQA,GPT-4.1 Score,320,QUEST Only,NA
+NarrativeQA,GPT-4.1 Score,16384,QUEST Only,1.3
+NarrativeQA,GPT-4.1 Score,8192,QUEST Only,1.25
+NarrativeQA,GPT-4.1 Score,4096,QUEST Only,1.25
+NarrativeQA,GPT-4.1 Score,2048,QUEST Only,1.29
+NarrativeQA,GPT-4.1 Score,1024,QUEST Only,1.22
+NarrativeQA,GPT-4.1 Score,512,QUEST Only,1.33
+NarrativeQA,GPT-4.1 Score,320,QUEST Only,1
 InfiniteBench QA,F1,9451.595,WG-KV + QUEST,35.1057992987405
 InfiniteBench QA,F1,8192,WG-KV + QUEST,35.2244140173552
 InfiniteBench QA,F1,4096,WG-KV + QUEST,34.1038012967425
