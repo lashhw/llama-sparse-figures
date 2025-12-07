@@ -8,9 +8,9 @@ fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.3) +
   scale_colour_brewer(palette = "Dark2") +
-  scale_x_continuous(
-    limits = c(0, NA),
-    breaks = scales::pretty_breaks(n = 6),
+  scale_x_log10(
+    breaks = scales::log_breaks(n = 6),
+    labels = scales::label_number(),
     expand = expansion(mult = c(0, 0.02))
   ) +
   scale_y_continuous(
@@ -20,7 +20,7 @@ fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda)) +
   ) +
   guides(colour = guide_legend(nrow = 2, byrow = TRUE)) +
   labs(
-    x = "KV Cache Size",
+    x = "KV Cache Size (log scale)",
     y = "Distillation Loss",
     colour = expression(lambda)
   ) +
