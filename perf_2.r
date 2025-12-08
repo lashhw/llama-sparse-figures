@@ -14,7 +14,7 @@ reduction_labels <- data %>%
   distinct(tokens, method, total_latency) %>%
   group_by(tokens) %>%
   mutate(
-    vanilla_latency = total_latency[method == "Vanilla"],
+    vanilla_latency = total_latency[method == "Full"],
     reduction = (total_latency - vanilla_latency) / vanilla_latency,
     label = if_else(
       method == "WG-KV",
