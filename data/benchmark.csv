@@ -19,16 +19,16 @@ Natural Questions,Accuracy,0.411149372706549,DuoAttention,58.6666666666667
 Natural Questions,Accuracy,0.31091712732699,DuoAttention,56.1666666666667
 Natural Questions,Accuracy,0.214539968308183,DuoAttention,52.1666666666667
 Natural Questions,Accuracy,0.114307722928623,DuoAttention,51.8333333333333
-Natural Questions,Accuracy,1,Local Attention,NA
-Natural Questions,Accuracy,0.9,Local Attention,NA
-Natural Questions,Accuracy,0.8,Local Attention,NA
-Natural Questions,Accuracy,0.7,Local Attention,NA
-Natural Questions,Accuracy,0.6,Local Attention,NA
-Natural Questions,Accuracy,0.5,Local Attention,NA
-Natural Questions,Accuracy,0.4,Local Attention,NA
-Natural Questions,Accuracy,0.3,Local Attention,NA
-Natural Questions,Accuracy,0.2,Local Attention,NA
-Natural Questions,Accuracy,0.1,Local Attention,NA
+Natural Questions,Accuracy,1,Local Attention,58
+Natural Questions,Accuracy,0.905968112445471,Local Attention,58.3333333333333
+Natural Questions,Accuracy,0.805868007942381,Local Attention,57.5
+Natural Questions,Accuracy,0.705885199085534,Local Attention,54.5
+Natural Questions,Accuracy,0.605902390228686,Local Attention,52.3333333333333
+Natural Questions,Accuracy,0.505919581371839,Local Attention,52
+Natural Questions,Accuracy,0.405842935997997,Local Attention,51.8333333333333
+Natural Questions,Accuracy,0.305907045399646,Local Attention,50.5
+Natural Questions,Accuracy,0.20590077741355,Local Attention,48.3333333333333
+Natural Questions,Accuracy,0.105894509427454,Local Attention,47.8333333333333
 TriviaQA,Accuracy,1,WG-KV,89.3333333333333
 TriviaQA,Accuracy,0.784498492872271,WG-KV,89
 TriviaQA,Accuracy,0.664261312691248,WG-KV,89.3333333333333
@@ -49,16 +49,16 @@ TriviaQA,Accuracy,0.411126750301316,DuoAttention,86.5
 TriviaQA,Accuracy,0.310891740398849,DuoAttention,86.5
 TriviaQA,Accuracy,0.214511923184938,DuoAttention,82
 TriviaQA,Accuracy,0.114272852771131,DuoAttention,78
-TriviaQA,Accuracy,1,Local Attention,NA
-TriviaQA,Accuracy,0.9,Local Attention,NA
-TriviaQA,Accuracy,0.8,Local Attention,NA
-TriviaQA,Accuracy,0.7,Local Attention,NA
-TriviaQA,Accuracy,0.6,Local Attention,NA
-TriviaQA,Accuracy,0.5,Local Attention,NA
-TriviaQA,Accuracy,0.4,Local Attention,NA
-TriviaQA,Accuracy,0.3,Local Attention,NA
-TriviaQA,Accuracy,0.2,Local Attention,NA
-TriviaQA,Accuracy,0.1,Local Attention,NA
+TriviaQA,Accuracy,1,Local Attention,89.3333333333333
+TriviaQA,Accuracy,0.905702768010204,Local Attention,88.5
+TriviaQA,Accuracy,0.805724415944581,Local Attention,84.6666666666667
+TriviaQA,Accuracy,0.705769467051259,Local Attention,83.1666666666667
+TriviaQA,Accuracy,0.605884727674836,Local Attention,84.3333333333333
+TriviaQA,Accuracy,0.505789359747714,Local Attention,83
+TriviaQA,Accuracy,0.405834410854391,Local Attention,81
+TriviaQA,Accuracy,0.305879461961069,Local Attention,81.1666666666667
+TriviaQA,Accuracy,0.205807497206246,Local Attention,78.5
+TriviaQA,Accuracy,0.105758935623724,Local Attention,74.6666666666667
 PopQA,Accuracy,1,WG-KV,60.5
 PopQA,Accuracy,0.780062129646225,WG-KV,60.6666666666667
 PopQA,Accuracy,0.659883784710849,WG-KV,60.3333333333333
