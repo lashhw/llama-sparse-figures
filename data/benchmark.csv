@@ -140,15 +140,15 @@ NarrativeQA,GPT-4.1 Score,0.310605664166932,DuoAttention,1.12
 NarrativeQA,GPT-4.1 Score,0.214203723045618,DuoAttention,1.07
 NarrativeQA,GPT-4.1 Score,0.113948365275971,DuoAttention,0.73
 NarrativeQA,GPT-4.1 Score,1,Local Attention,1.3
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
-NarrativeQA,GPT-4.1 Score,NA,Local Attention,NA
+NarrativeQA,GPT-4.1 Score,0.905788263706001,Local Attention,1.22
+NarrativeQA,GPT-4.1 Score,0.805702043858918,Local Attention,1.25
+NarrativeQA,GPT-4.1 Score,0.705615824011836,Local Attention,1.11
+NarrativeQA,GPT-4.1 Score,0.605597953506784,Local Attention,1.16
+NarrativeQA,GPT-4.1 Score,0.505534516773712,Local Attention,1.14
+NarrativeQA,GPT-4.1 Score,0.40553942938267,Local Attention,0.99
+NarrativeQA,GPT-4.1 Score,0.30565825756168,Local Attention,0.94
+NarrativeQA,GPT-4.1 Score,0.205663170170638,Local Attention,0.88
+NarrativeQA,GPT-4.1 Score,0.105576950323556,Local Attention,0.95
 InfiniteBench QA,F1,1,WG-KV,33.51338534015
 InfiniteBench QA,F1,0.737888292009176,WG-KV,33.1002901020548
 InfiniteBench QA,F1,0.607283539190794,WG-KV,32.6344892362539
@@ -259,16 +259,16 @@ InfiniteBench Sum,GPT-4.1 F1,0.416814677998929,DuoAttention,0.123212708028035
 InfiniteBench Sum,GPT-4.1 F1,0.315399776691884,DuoAttention,0.0944567646239652
 InfiniteBench Sum,GPT-4.1 F1,0.217660918689786,DuoAttention,0.0648067398715809
 InfiniteBench Sum,GPT-4.1 F1,0.114186817651457,DuoAttention,0.0387013712271577
-InfiniteBench Sum,GPT-4.1 F1,1,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
-InfiniteBench Sum,GPT-4.1 F1,NA,Local Attention,NA
+InfiniteBench Sum,GPT-4.1 F1,1,Local Attention,0.154791219875634
+InfiniteBench Sum,GPT-4.1 F1,0.905023499569818,Local Attention,0.162517031875409
+InfiniteBench Sum,GPT-4.1 F1,0.805163750554915,Local Attention,0.166146537786789
+InfiniteBench Sum,GPT-4.1 F1,0.705345906596249,Local Attention,0.165219846862145
+InfiniteBench Sum,GPT-4.1 F1,0.604878534265895,Local Attention,0.16233713734284
+InfiniteBench Sum,GPT-4.1 F1,0.505207358004062,Local Attention,0.156159424659227
+InfiniteBench Sum,GPT-4.1 F1,0.405179988764207,Local Attention,0.130057203760902
+InfiniteBench Sum,GPT-4.1 F1,0.304922141715043,Local Attention,0.119464553753389
+InfiniteBench Sum,GPT-4.1 F1,0.205083345228258,Local Attention,0.104473392787005
+InfiniteBench Sum,GPT-4.1 F1,0.105370263910187,Local Attention,0.081621495628306
 Multi-LexSum,GPT-4.1 F1,1,WG-KV,0.429308720799446
 Multi-LexSum,GPT-4.1 F1,0.789163196837392,WG-KV,0.443586095302422
 Multi-LexSum,GPT-4.1 F1,0.670408569193672,WG-KV,0.42914764944145
@@ -289,16 +289,16 @@ Multi-LexSum,GPT-4.1 F1,0.417274634243657,DuoAttention,0.405631703236896
 Multi-LexSum,GPT-4.1 F1,0.31544606937109,DuoAttention,0.346664468703279
 Multi-LexSum,GPT-4.1 F1,0.218041364333848,DuoAttention,0.304186292536076
 Multi-LexSum,GPT-4.1 F1,0.11618687677122,DuoAttention,0.188371609684128
-Multi-LexSum,GPT-4.1 F1,1,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
-Multi-LexSum,GPT-4.1 F1,NA,Local Attention,NA
+Multi-LexSum,GPT-4.1 F1,1,Local Attention,0.429308720799446
+Multi-LexSum,GPT-4.1 F1,0.906183123402256,Local Attention,0.426197593252603
+Multi-LexSum,GPT-4.1 F1,0.806311968042744,Local Attention,0.42754104685127
+Multi-LexSum,GPT-4.1 F1,0.70639034721817,Local Attention,0.391405558268513
+Multi-LexSum,GPT-4.1 F1,0.606266864533344,Local Attention,0.367949800901582
+Multi-LexSum,GPT-4.1 F1,0.506219080046113,Local Attention,0.359707207996487
+Multi-LexSum,GPT-4.1 F1,0.406272226489007,Local Attention,0.338315247847783
+Multi-LexSum,GPT-4.1 F1,0.306375838396965,Local Attention,0.334278459994822
+Multi-LexSum,GPT-4.1 F1,0.206328053909733,Local Attention,0.299034860648525
+Multi-LexSum,GPT-4.1 F1,0.106280269422502,Local Attention,0.246860163141278
 TREC Fine,Accuracy,1,WG-KV,55.8
 TREC Fine,Accuracy,0.769815600957661,WG-KV,55.8
 TREC Fine,Accuracy,0.645508280198316,WG-KV,55.8
@@ -410,12 +410,12 @@ CLINC150,Accuracy,0.311269669377166,DuoAttention,78.4
 CLINC150,Accuracy,0.214937369572891,DuoAttention,46.4
 CLINC150,Accuracy,0.114751777776446,DuoAttention,2.6
 CLINC150,Accuracy,1,Local Attention,92.6
-CLINC150,Accuracy,NA,Local Attention,NA
-CLINC150,Accuracy,NA,Local Attention,NA
-CLINC150,Accuracy,NA,Local Attention,NA
-CLINC150,Accuracy,NA,Local Attention,NA
-CLINC150,Accuracy,NA,Local Attention,NA
-CLINC150,Accuracy,NA,Local Attention,NA
-CLINC150,Accuracy,NA,Local Attention,NA
+CLINC150,Accuracy,0.906065321909296,Local Attention,92.2
+CLINC150,Accuracy,0.806019901203326,Local Attention,91.8
+CLINC150,Accuracy,0.706032745241276,Local Attention,91
+CLINC150,Accuracy,0.606060155465206,Local Attention,90.4
+CLINC150,Accuracy,0.50608271029381,Local Attention,89.2
+CLINC150,Accuracy,0.406056711169147,Local Attention,89.4
+CLINC150,Accuracy,0.306069555207097,Local Attention,89
 CLINC150,Accuracy,0.2060921100357,Local Attention,86.2
 CLINC150,Accuracy,0.106478819513803,Local Attention,61.8
