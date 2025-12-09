@@ -22,7 +22,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
     filter(panel_title == panel_label, y_label == axis_label)
 
   full_attention_score <- panel_data %>%
-    filter(method == "QUEST Only") %>%
+    filter(method == "Quest Only") %>%
     arrange(desc(kv_attended)) %>%
     pull(score) %>%
     first()
@@ -38,8 +38,8 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
       geom_point(size = 1.5) +
       scale_colour_manual(
         values = c(
-          "WG-KV + QUEST" = "#D79B00",
-          "QUEST Only" = "#82B366",
+          "WG-KV + Quest" = "#D79B00",
+          "Quest Only" = "#82B366",
           "Full Attention" = "#666666"
         )
       ) +
