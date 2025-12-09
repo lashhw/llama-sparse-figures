@@ -34,7 +34,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         linewidth = 0.9
       ) +
       geom_line(linewidth = 1) +
-      geom_point(size = 2) +
+      geom_point(size = 1.5) +
       scale_colour_manual(
         values = c(
           "WG-KV" = "#6C8EBF",
