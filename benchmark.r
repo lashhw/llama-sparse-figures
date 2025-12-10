@@ -1,9 +1,11 @@
 library(tidyverse)
 library(patchwork)
 
+method_priority <- c("Local Attention", "DuoAttention", "WG-KV")
+
 data <- read_csv("data/benchmark.csv") %>%
   mutate(
-    method = fct_inorder(method),
+    method = fct_relevel(method, method_priority),
     score = case_when(
       panel_title == "NarrativeQA" ~ score * (100 / 3),
       panel_title == "InfiniteBench Sum" | panel_title == "Multi-LexSum" ~ score * 100,
@@ -26,19 +28,27 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
     pull(score) %>%
     first()
 
-  ggplot(panel_data, aes(x = kv_size, y = score, colour = method)) +
+  plot <- ggplot(panel_data, aes(x = kv_size, y = score, colour = method)) +
     geom_hline(
       aes(yintercept = full_attention_score, colour = "Full Attention"),
       linetype = "dashed",
       linewidth = 0.9
-    ) +
-    geom_line(linewidth = 1) +
-    geom_point(size = 1.5) +
+    )
+
+  for (method_name in method_priority) {
+    method_data <- panel_data %>% filter(method == method_name)
+    plot <- plot +
+      geom_line(data = method_data, linewidth = 1) +
+      geom_point(data = method_data, size = 1.5)
+  }
+
+  plot +
     scale_colour_manual(
+      breaks = c("WG-KV", "DuoAttention", "Local Attention", "Full Attention"),
       values = c(
         "WG-KV" = "#6C8EBF",
-        "DuoAttention" = "#D6B656",
-        "Local Attention" = "#B85450",
+        "DuoAttention" = "#B85450",
+        "Local Attention" = "#D6B656",
         "Full Attention" = "#666666"
       )
     ) +
