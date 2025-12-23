@@ -127,38 +127,38 @@ HotpotQA,Accuracy,0.305588247373498,Local Attention,40.3333333333333
 HotpotQA,Accuracy,0.205585764351309,Local Attention,34.3333333333333
 HotpotQA,Accuracy,0.105651064304508,Local Attention,30
 HotpotQA,Accuracy,0.0556272284682848,Local Attention,23
-NarrativeQA,GPT-4.1 Score,1,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,,WG-KV,
-NarrativeQA,GPT-4.1 Score,1,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,,DuoAttention,
-NarrativeQA,GPT-4.1 Score,1,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
-NarrativeQA,GPT-4.1 Score,,Local Attention,
+NarrativeQA,GPT-4.1 Score,1,WG-KV,0.96
+NarrativeQA,GPT-4.1 Score,0.837032204077913,WG-KV,1
+NarrativeQA,GPT-4.1 Score,0.736564038286505,WG-KV,0.98
+NarrativeQA,GPT-4.1 Score,0.621434331526793,WG-KV,0.95
+NarrativeQA,GPT-4.1 Score,0.397613839859012,WG-KV,1.01
+NarrativeQA,GPT-4.1 Score,0.221040159325895,WG-KV,1
+NarrativeQA,GPT-4.1 Score,0.14985875923539,WG-KV,0.99
+NarrativeQA,GPT-4.1 Score,0.096803895088885,WG-KV,0.93
+NarrativeQA,GPT-4.1 Score,0.0582792929597791,WG-KV,1.02
+NarrativeQA,GPT-4.1 Score,0.0346918682799676,WG-KV,0.84
+NarrativeQA,GPT-4.1 Score,1,DuoAttention,0.96
+NarrativeQA,GPT-4.1 Score,0.901396981629627,DuoAttention,0.99
+NarrativeQA,GPT-4.1 Score,0.801931526635128,DuoAttention,1.05
+NarrativeQA,GPT-4.1 Score,0.702549494433023,DuoAttention,1.01
+NarrativeQA,GPT-4.1 Score,0.606612000967381,DuoAttention,1.07
+NarrativeQA,GPT-4.1 Score,0.507287905095675,DuoAttention,0.75
+NarrativeQA,GPT-4.1 Score,0.407855787655952,DuoAttention,0.53
+NarrativeQA,GPT-4.1 Score,0.311856116691699,DuoAttention,0.33
+NarrativeQA,GPT-4.1 Score,0.212420428780134,DuoAttention,0.33
+NarrativeQA,GPT-4.1 Score,0.113024785387025,DuoAttention,0.33
+NarrativeQA,GPT-4.1 Score,0.0650431474754792,DuoAttention,0.31
+NarrativeQA,GPT-4.1 Score,1,Local Attention,0.96
+NarrativeQA,GPT-4.1 Score,0.905763925136082,Local Attention,1
+NarrativeQA,GPT-4.1 Score,0.805570409507476,Local Attention,0.87
+NarrativeQA,GPT-4.1 Score,0.70553596727633,Local Attention,0.84
+NarrativeQA,GPT-4.1 Score,0.605706047984775,Local Attention,0.76
+NarrativeQA,GPT-4.1 Score,0.505467082814037,Local Attention,0.83
+NarrativeQA,GPT-4.1 Score,0.405568989209285,Local Attention,0.76
+NarrativeQA,GPT-4.1 Score,0.305716345146664,Local Attention,0.65
+NarrativeQA,GPT-4.1 Score,0.205545554289123,Local Attention,0.59
+NarrativeQA,GPT-4.1 Score,0.105556561600108,Local Attention,0.43
+NarrativeQA,GPT-4.1 Score,0.0555393404845347,Local Attention,0.37
 InfiniteBench QA,F1,1,WG-KV,30.5513564213564
 InfiniteBench QA,F1,0.83735280610658,WG-KV,30.3846897546898
 InfiniteBench QA,F1,0.73515421358148,WG-KV,30.2903174603175
