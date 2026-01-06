@@ -35,7 +35,7 @@ fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = comp
     breaks = c(0, 0.25, 0.5, 0.75, 1),
     labels = c("0", "0.25", "0.5", "0.75", "1"),
   ) +
-  labs(x = "Normalized Time", y = NULL) +
+  labs(x = "Normalized Time", y = "Sequence Length") +
   theme_minimal(base_size = 18) +
   theme(
     strip.text = element_text(size = 21, face = "bold"),
