@@ -47,4 +47,4 @@ fig <- ggplot(data, aes(x = latency, y = tokens, fill = component, colour = comp
     panel.grid.major.y = element_blank(),
   )
 
-ggsave("breakdown_1.pdf", fig, width = 7.0, height = 4.0, units = "in")
+ggsave("breakdown_1.pdf", fig, width = 7.4, height = 4.0, units = "in")
