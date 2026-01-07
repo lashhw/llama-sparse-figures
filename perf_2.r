@@ -3,7 +3,7 @@ library(tidyverse)
 data <- read_csv("data/perf_2.csv") %>%
   mutate(
     tokens = fct_inorder(tokens),
-    method = fct_inorder(method),
+    method = fct_relevel(method, "WG-KV", "Full"),
     component = fct_inorder(component)
   ) %>%
   group_by(tokens, method) %>%
@@ -24,16 +24,16 @@ reduction_labels <- data %>%
   ) %>%
   ungroup()
 
-fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = component)) +
+fig <- ggplot(data, aes(x = latency, y = method, fill = component, colour = component)) +
   geom_col(width = 0.75, position = position_stack(reverse = TRUE)) +
   geom_text(
     data = reduction_labels,
-    aes(x = method, y = total_latency, label = label),
-    vjust = -0.5,
-    size = 5,
+    aes(x = total_latency, y = method, label = label),
+    hjust = -0.13,
+    size = 5.5,
     inherit.aes = FALSE
   ) +
-  facet_grid(. ~ tokens, switch = "x") +
+  facet_grid(tokens ~ ., switch = "y") +
   scale_fill_manual(
     values = c("Non-Attention" = "#DAE8FC", "Attention" = "#F8CECC"),
   ) +
@@ -42,22 +42,24 @@ fig <- ggplot(data, aes(x = method, y = latency, fill = component, colour = comp
   ) +
   labs(
     title = "(b) Decode Latency",
-    x = NULL,
-    y = "TPOT (ms)",
+    x = "Time per Output Token (ms)",
+    y = "Sequence Length",
   ) +
   theme_minimal(base_size = 18) +
   theme(
     plot.title = element_text(size = 24, hjust = 0.5, face = "bold"),
+    plot.margin = margin(0, 50, 0, 0),
     legend.position = "top",
     legend.title = element_blank(),
-    legend.text = element_text(size = 18),
-    axis.text.x = element_text(size = 14, colour = "black", angle = 30, hjust = 1),
-    axis.text.y = element_text(size = 16, colour = "black"),
-    strip.text.x = element_text(size = 20),
+    legend.text = element_text(size = 19),
+    axis.title.y = element_text(size = 22),
+    axis.text.x = element_text(size = 16, colour = "black"),
+    axis.text.y = element_text(size = 18, colour = "black"),
+    strip.text.y = element_text(size = 21),
     strip.placement = "outside",
     panel.spacing = unit(0, "cm"),
-    panel.grid.major.x = element_blank(),
-    panel.grid.minor.x = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
   )
 
-ggsave("perf_2.pdf", fig, width = 5.0, height = 4.5, units = "in")
+ggsave("perf_2.pdf", fig, width = 5.5, height = 5.0, units = "in")
