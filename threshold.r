@@ -20,7 +20,7 @@ fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda)) +
     colour = guide_legend(nrow = 2, byrow = TRUE)
   ) +
   labs(
-    x = "Normalized KV Cache Size\n(log scale)",
+    x = "Normalized KV Cache Size (log scale)",
     y = "Distillation Loss",
     colour = expression(lambda)
   ) +
@@ -37,4 +37,4 @@ fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda)) +
     plot.margin = margin(r = 50)
   )
 
-ggsave("threshold.pdf", fig, width = 3.7, height = 4.0, units = "in")
+ggsave("threshold.pdf", fig, width = 5, height = 4.0, units = "in")
