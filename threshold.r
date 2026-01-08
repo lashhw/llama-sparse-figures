@@ -34,7 +34,6 @@ fig <- ggplot(data, aes(x = kv_size, y = distill_loss, colour = lambda)) +
     axis.text.y = element_text(size = 13, colour = "black"),
     axis.title.x = element_text(size = 15),
     axis.title.y = element_text(size = 15),
-    plot.margin = margin(r = 50)
   )
 
 ggsave("threshold.pdf", fig, width = 5, height = 4.0, units = "in")
