@@ -54,13 +54,13 @@ make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_l
     ) +
     theme_minimal(base_size = 16) +
     theme(
-      plot.title = element_text(size = 18, hjust = 0.5, face = "bold"),
-      axis.title.x = element_text(size = 14),
+      plot.title = element_text(size = 16, hjust = 0.5, face = "bold"),
+      axis.title.x = element_text(size = 13),
       axis.text.x = element_text(size = 12, colour = "black"),
-      axis.title.y = element_text(size = 14, color = "black"),
+      axis.title.y = element_text(size = 13, color = "black"),
       axis.text.y = element_text(color = "black"),
       legend.position = "top",
-      legend.text = element_text(size = 12),
+      legend.text = element_text(size = 13),
       panel.grid.minor = element_blank(),
       panel.grid.major.x = element_blank()
     )
@@ -71,7 +71,7 @@ plot_a <- read_csv("data/snapkv_no.csv") %>%
   make_bar_line_plot(
     "(a) WG-KV Only",
     "avg_kv",
-    "Avg KV Cache Size (Tokens)",
+    "Avg. KV Cache Size (Tokens)",
     "KV Cache Size",
     "#cbd5e8",
     c(0, 5000, 10000, 15000, 20000, 25000)
@@ -82,7 +82,7 @@ plot_b <- read_csv("data/snapkv_4096.csv") %>%
   make_bar_line_plot(
     "(b) WG-KV + SnapKV",
     "num_evict",
-    "Avg Eviction Counts",
+    "Avg. Eviction Count",
     "Eviction Counts",
     "#b3e2cd",
     c(0, 16, 32, 48, 64, 80)
