@@ -15,7 +15,6 @@ make_bar_line_plot <- function(data, title, metric, left_label, bar_label, bar_f
       aes(y = {{ metric }}, colour = bar_label),
       width = 0.65,
       fill = bar_fill,
-      linewidth = 0
     ) +
     geom_line(
       aes(y = accuracy_scaled, colour = "AIME25 Accuracy", group = 1),
