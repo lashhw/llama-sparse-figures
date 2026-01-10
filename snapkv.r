@@ -89,4 +89,4 @@ plot_b <- read_csv("data/snapkv_4096.csv") %>%
 
 fig <- plot_a + plot_b + plot_layout(ncol = 2)
 
-ggsave("snapkv.pdf", fig, width = 9, height = 4, units = "in")
+ggsave("snapkv.pdf", fig, width = 8.5, height = 4, units = "in")
