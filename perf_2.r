@@ -25,7 +25,7 @@ reduction_labels <- data %>%
   ungroup()
 
 fig <- ggplot(data, aes(x = latency, y = method, fill = component, colour = component)) +
-  geom_col(width = 0.8, position = position_stack(reverse = TRUE), linewidth = 0.7) +
+  geom_col(width = 0.8, position = position_stack(reverse = TRUE), linewidth = 0.68) +
   geom_text(
     data = reduction_labels,
     aes(x = total_latency, y = method, label = label),
