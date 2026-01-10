@@ -18,22 +18,22 @@ make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_l
       linewidth = 0
     ) +
     geom_line(
-      aes(y = accuracy_scaled, colour = "Accuracy", group = 1),
+      aes(y = accuracy_scaled, colour = "AIME25 Accuracy", group = 1),
       linewidth = 1
     ) +
     geom_point(
-      aes(y = accuracy_scaled, colour = "Accuracy"),
+      aes(y = accuracy_scaled, colour = "AIME25 Accuracy"),
       size = 2
     ) +
     geom_text(
-      aes(y = accuracy_scaled, label = accuracy_label, colour = "Accuracy"),
+      aes(y = accuracy_scaled, label = accuracy_label, colour = "AIME25 Accuracy"),
       vjust = -1,
       size = 3.5,
       show.legend = FALSE
     ) +
     scale_colour_manual(
-      values = c(setNames(bar_fill, bar_legend_label), Accuracy = "#a6761d"),
-      breaks = c(bar_legend_label, "Accuracy"),
+      values = c(setNames(bar_fill, bar_legend_label), "AIME25 Accuracy" = "#a6761d"),
+      breaks = c(bar_legend_label, "AIME25 Accuracy"),
       name = NULL
     ) +
     scale_y_continuous(
@@ -43,7 +43,7 @@ make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_l
       labels = scales::label_comma(accuracy = 1),
       sec.axis = sec_axis(
         ~ . / scale_factor,
-        name = "Accuracy",
+        name = "Accuracy (Pass@1)",
         breaks = seq(0, 1, 0.2),
         labels = scales::label_number(accuracy = 0.1)
       )
@@ -54,7 +54,7 @@ make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_l
     ) +
     theme_minimal(base_size = 16) +
     theme(
-      plot.title = element_text(size = 16, hjust = 0.5, face = "bold"),
+      plot.title = element_text(size = 15, hjust = 0.5, face = "bold"),
       axis.title.x = element_text(size = 13),
       axis.text.x = element_text(size = 12, colour = "black"),
       axis.title.y = element_text(size = 13, color = "black"),
@@ -69,22 +69,22 @@ make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_l
 plot_a <- read_csv("data/snapkv_no.csv") %>%
   mutate(lambda = fct_inorder(lambda)) %>%
   make_bar_line_plot(
-    "(a) WG-KV Only",
+    "(a) Unbounded Cache (WG-KV Only)",
     "avg_kv",
-    "Avg. KV Cache Size (Tokens)",
+    "Avg. Cache Size (Tokens)",
     "KV Cache Size",
-    "#cbd5e8",
+    "#f8cecc",
     c(0, 5000, 10000, 15000, 20000, 25000)
   )
 
 plot_b <- read_csv("data/snapkv_4096.csv") %>%
   mutate(lambda = fct_inorder(lambda)) %>%
   make_bar_line_plot(
-    "(b) WG-KV + SnapKV",
+    "(b) Bounded Cache (WG-KV + SnapKV)",
     "num_evict",
-    "Avg. Eviction Count",
-    "Eviction Counts",
-    "#b3e2cd",
+    "Avg. # Eviction Triggers",
+    "# Eviction Triggers",
+    "#cbd5e8",
     c(0, 16, 32, 48, 64, 80)
   )
 
