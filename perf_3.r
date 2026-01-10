@@ -25,7 +25,7 @@ reduction_labels <- data %>%
   ungroup()
 
 fig <- ggplot(data, aes(x = size, y = method, fill = component, colour = component)) +
-  geom_col(width = 0.8, position = position_stack(reverse = TRUE), linewidth = 0.68) +
+  geom_col(width = 0.75, position = position_stack(reverse = TRUE)) +
   geom_text(
     data = reduction_labels,
     aes(x = total_latency, y = method, label = label),
@@ -34,7 +34,6 @@ fig <- ggplot(data, aes(x = size, y = method, fill = component, colour = compone
     inherit.aes = FALSE
   ) +
   facet_grid(tokens ~ ., switch = "y") +
-  scale_y_discrete(expand = expansion(add = 0.67)) +
   scale_fill_manual(
     values = c("Model Weights" = "#DAE8FC", "KV Cache" = "#F8CECC"),
   ) +
@@ -55,11 +54,11 @@ fig <- ggplot(data, aes(x = size, y = method, fill = component, colour = compone
     axis.title.y = element_text(size = 22),
     axis.text.x = element_text(size = 16, colour = "black"),
     axis.text.y = element_text(size = 18, colour = "black"),
-    strip.text.y = element_text(size = 20, colour = "black"),
+    strip.text.y = element_text(size = 21),
     strip.placement = "outside",
     panel.spacing = unit(0, "cm"),
     panel.grid.major.y = element_blank(),
     panel.grid.minor.y = element_blank(),
   )
 
-ggsave("perf_3.pdf", fig, width = 6.2, height = 4.9, units = "in")
+ggsave("perf_3.pdf", fig, width = 6.2, height = 5.24, units = "in")
