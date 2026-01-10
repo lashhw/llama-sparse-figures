@@ -1,7 +1,7 @@
 library(tidyverse)
 library(patchwork)
 
-make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_label, bar_fill, left_ticks) {
+make_bar_line_plot <- function(data, title, metric, left_label, bar_legend_label, bar_fill, left_ticks) {
   scale_factor <- max(left_ticks)
 
   data <- data %>%
@@ -12,7 +12,7 @@ make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_l
 
   ggplot(data, aes(x = lambda)) +
     geom_col(
-      aes(y = .data[[metric_col]], colour = bar_legend_label),
+      aes(y = {{ metric }}, colour = bar_legend_label),
       width = 0.65,
       fill = bar_fill,
       linewidth = 0
@@ -40,7 +40,7 @@ make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_l
       name = left_label,
       limits = c(0, scale_factor),
       breaks = left_ticks,
-      labels = scales::label_comma(accuracy = 1),
+      labels = scales::label_comma(),
       sec.axis = sec_axis(
         ~ . / scale_factor,
         name = "Accuracy (Pass@1)",
@@ -55,10 +55,10 @@ make_bar_line_plot <- function(data, title, metric_col, left_label, bar_legend_l
     theme_minimal(base_size = 16) +
     theme(
       plot.title = element_text(size = 15, hjust = 0.5, face = "bold"),
-      axis.title.x = element_text(size = 13),
+      axis.title.x = element_text(size = 13, colour = "black"),
       axis.text.x = element_text(size = 12, colour = "black"),
-      axis.title.y = element_text(size = 13, color = "black"),
-      axis.text.y = element_text(color = "black"),
+      axis.title.y = element_text(size = 13, colour = "black"),
+      axis.text.y = element_text(size = 12, colour = "black"),
       legend.position = "top",
       legend.text = element_text(size = 13),
       panel.grid.minor = element_blank(),
@@ -70,7 +70,7 @@ plot_a <- read_csv("data/snapkv_no.csv") %>%
   mutate(lambda = fct_inorder(lambda)) %>%
   make_bar_line_plot(
     "(a) Unbounded Cache (WG-KV Only)",
-    "avg_kv",
+    avg_kv,
     "Avg. Cache Size (Tokens)",
     "KV Cache Size",
     "#f8cecc",
@@ -81,7 +81,7 @@ plot_b <- read_csv("data/snapkv_4096.csv") %>%
   mutate(lambda = fct_inorder(lambda)) %>%
   make_bar_line_plot(
     "(b) Bounded Cache (WG-KV + SnapKV)",
-    "num_evict",
+    num_evict,
     "Avg. # Eviction Triggers",
     "# Eviction Triggers",
     "#cbd5e8",
