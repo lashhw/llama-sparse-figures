@@ -1,7 +1,7 @@
 library(tidyverse)
 library(patchwork)
 
-make_bar_line_plot <- function(data, title, metric, left_label, bar_legend_label, bar_fill, left_ticks) {
+make_bar_line_plot <- function(data, title, metric, left_label, bar_label, bar_fill, left_ticks) {
   scale_factor <- max(left_ticks)
 
   data <- data %>%
@@ -12,7 +12,7 @@ make_bar_line_plot <- function(data, title, metric, left_label, bar_legend_label
 
   ggplot(data, aes(x = lambda)) +
     geom_col(
-      aes(y = {{ metric }}, colour = bar_legend_label),
+      aes(y = {{ metric }}, colour = bar_label),
       width = 0.65,
       fill = bar_fill,
       linewidth = 0
@@ -32,8 +32,8 @@ make_bar_line_plot <- function(data, title, metric, left_label, bar_legend_label
       show.legend = FALSE
     ) +
     scale_colour_manual(
-      values = c(setNames(bar_fill, bar_legend_label), "AIME25 Accuracy" = "#a6761d"),
-      breaks = c(bar_legend_label, "AIME25 Accuracy"),
+      values = c(setNames(bar_fill, bar_label), "AIME25 Accuracy" = "#a6761d"),
+      breaks = c(bar_label, "AIME25 Accuracy"),
       name = NULL
     ) +
     scale_y_continuous(
