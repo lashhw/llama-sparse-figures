@@ -40,12 +40,14 @@ fig <- ggplot(data, aes(x = layer_index, y = head_index, fill = gate_value)) +
   guides(
     fill = guide_colorbar(
       barheight = grid::unit(12, "line"),
-      barwidth = grid::unit(1, "line")
+      barwidth = grid::unit(1, "line"),
+      title.position = "right"
     )
   ) +
   labs(
     x = "Layer Index",
-    y = "KV Head Index"
+    y = "KV Head Index",
+    fill = "Normalized KV Cache Size"
   ) +
   coord_fixed() +
   theme_minimal(base_size = 20) +
@@ -53,7 +55,7 @@ fig <- ggplot(data, aes(x = layer_index, y = head_index, fill = gate_value)) +
     strip.text.x = element_text(size = 20, face = "bold"),
     strip.placement = "outside",
     legend.position = "right",
-    legend.title = element_blank(),
+    legend.title = element_text(size = 16, angle = 90, vjust = 0.5),
     legend.text = element_text(size = 13),
     axis.text.x = element_text(size = 13, colour = "black"),
     axis.text.y = element_text(size = 13, colour = "black"),
