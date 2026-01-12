@@ -25,7 +25,8 @@ make_bar_line_plot <- function(data, title, metric, left_label, bar_label, bar_f
       size = 2
     ) +
     geom_text(
-      aes(y = accuracy_scaled, label = accuracy_label, colour = "AIME25 Accuracy"),
+      aes(y = accuracy_scaled, label = accuracy_label),
+      colour = "#7b5715",
       vjust = -1,
       size = 3.5,
       show.legend = FALSE
