@@ -90,7 +90,6 @@ plot <- ggplot(data, aes(x = label)) +
     axis.text.y = element_text(size = 12, colour = "black"),
     legend.position = "top",
     legend.text = element_text(size = 13),
-    legend.box = "vertical",
     legend.key.width = grid::unit(0.9, "cm"),
     panel.grid.minor = element_blank(),
     panel.grid.major.x = element_blank(),
