@@ -72,7 +72,7 @@ plot_a <- read_csv("data/snapkv_no.csv") %>%
     avg_kv,
     "Avg. Cache Size (Tokens)",
     "KV Cache Size",
-    "#f8cecc",
+    "#cbd5e8",
     c(0, 5000, 10000, 15000, 20000, 25000)
   )
 
@@ -83,7 +83,7 @@ plot_b <- read_csv("data/snapkv_4096.csv") %>%
     num_evict,
     "Avg. # Eviction Triggers",
     "# Eviction Triggers",
-    "#cbd5e8",
+    "#f8cecc",
     c(0, 16, 32, 48, 64, 80)
   )
 
