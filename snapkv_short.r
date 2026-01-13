@@ -33,7 +33,7 @@ plot <- ggplot(data, aes(x = label)) +
   geom_hline(
     aes(
       yintercept = baseline_accuracy * scale_factor,
-      color = "AIME25 Accuracy Under Unbounded Memory"
+      color = "AIME25 Accuracy Under Unbounded KV Cache"
     ),
     linewidth = 0.8,
     linetype = "dashed"
@@ -57,12 +57,12 @@ plot <- ggplot(data, aes(x = label)) +
     values = c(
       "# Eviction Triggers" = "#f8cecc",
       "AIME25 Accuracy" = "#a6761d",
-      "AIME25 Accuracy Under Unbounded Memory" = "#6b6b6b"
+      "AIME25 Accuracy Under Unbounded KV Cache" = "#6b6b6b"
     ),
     breaks = c(
       "# Eviction Triggers",
       "AIME25 Accuracy",
-      "AIME25 Accuracy Under Unbounded Memory"
+      "AIME25 Accuracy Under Unbounded KV Cache"
     ),
     name = NULL
   ) +
