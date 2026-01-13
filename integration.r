@@ -29,7 +29,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
     pull(score) %>%
     first()
 
-  plot <- ggplot(panel_data, aes(x = kv_attended, y = score, colour = method)) +
+  plot <- ggplot(panel_data, aes(x = kv_attended, y = score, colour = method, shape = method)) +
     geom_hline(
       aes(yintercept = full_attention_score, colour = "Full Attention"),
       linetype = "dashed",
@@ -40,7 +40,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
     method_data <- panel_data %>% filter(method == method_name)
     plot <- plot +
       geom_line(data = method_data, linewidth = 1) +
-      geom_point(data = method_data, size = 1.5)
+      geom_point(data = method_data, size = 1.7)
   }
 
   plot +
@@ -52,15 +52,24 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         "Full Attention" = "#666666"
       )
     ) +
+    scale_shape_manual(
+      values = c(
+        "WG-KV + Quest" = 17,
+        "Quest Only" = 16
+      )
+    ) +
     scale_x_log10(
       limits = range(panel_data$kv_attended, na.rm = TRUE),
       breaks = c(320, 1024, 4096, 16384),
       expand = c(0, 0)
     ) +
-    guides(colour = guide_legend(
-      override.aes = list(linetype = "solid", linewidth = 1.5, size = 3),
-      keywidth = 1.7
-    )) +
+    guides(
+      colour = guide_legend(
+        override.aes = list(linetype = "solid", linewidth = 1.5, size = 3, shape = c(17, 16, NA)),
+        keywidth = 1.7
+      ),
+      shape = "none"
+    ) +
     labs(
       x = "# KV Attended / Token",
       y = axis_label,

@@ -28,7 +28,7 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
     pull(score) %>%
     first()
 
-  plot <- ggplot(panel_data, aes(x = kv_size, y = score, colour = method)) +
+  plot <- ggplot(panel_data, aes(x = kv_size, y = score, colour = method, shape = method)) +
     geom_hline(
       aes(yintercept = full_attention_score, colour = "Full Attention"),
       linetype = "dashed",
@@ -52,15 +52,25 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
         "Full Attention" = "#666666"
       )
     ) +
+    scale_shape_manual(
+      values = c(
+        "WG-KV" = 15,
+        "DuoAttention" = 17,
+        "Local Attention" = 16
+      )
+    ) +
     scale_x_continuous(
       limits = c(0, 1),
       breaks = seq(0, 1, by = 0.2),
       expand = c(0, 0)
     ) +
-    guides(colour = guide_legend(
-      override.aes = list(linetype = "solid", linewidth = 1.5, size = 3),
-      keywidth = 1.7
-    )) +
+    guides(
+      colour = guide_legend(
+        override.aes = list(linetype = "solid", linewidth = 1.5, size = 3, shape = c(15, 17, 16, NA)),
+        keywidth = 1.7
+      ),
+      shape = "none"
+    ) +
     labs(
       x = "KV Cache Size",
       y = axis_label,
