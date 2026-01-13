@@ -46,6 +46,11 @@ fig_list <- map(seq_len(nrow(panel_info)), \(idx) {
   plot +
     scale_colour_manual(
       breaks = c("WG-KV + Quest", "Quest Only", "Full Attention"),
+      labels = c(
+        "WG-KV + Quest",
+        "Quest Only",
+        "Full Attention (Note: x-axis is logarithmic)"
+      ),
       values = c(
         "WG-KV + Quest" = "#D79B00",
         "Quest Only" = "#82B366",
