@@ -71,7 +71,7 @@ plot <- ggplot(data, aes(x = label)) +
   ) +
   scale_x_discrete(labels = function(x) parse(text = x)) +
   scale_y_continuous(
-    name = "# Eviction Triggers",
+    name = "Avg. # Eviction Triggers",
     limits = c(0, scale_factor),
     breaks = left_breaks,
     labels = scales::label_comma(),
