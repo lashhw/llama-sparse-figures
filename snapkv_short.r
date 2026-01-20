@@ -6,7 +6,7 @@ label_map <- c(
   "0.16" = "atop(lambda*'='*0.16,'WG-KV + SnapKV')",
   "0.32" = "lambda*'='*0.32",
   "0.64" = "lambda*'='*0.64",
-  "1.28" = "atop('WG-KV','Only')"
+  "1.28" = "atop(lambda*'='*1.28,'WG-KV Only')"
 )
 
 baseline_accuracy <- read_csv("data/snapkv_no.csv") %>%
